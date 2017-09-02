@@ -1,0 +1,8 @@
+#! /bin/sh
+set -exo nounset
+
+rm -rf $LFS/tools
+mkdir -v $LFS/tools
+
+rm -f /tools
+ln -sv $LFS/tools /

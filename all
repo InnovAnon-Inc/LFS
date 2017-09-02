@@ -1,0 +1,9 @@
+#! /bin/sh
+set -exo nounset
+
+cd $LFS/sources
+
+./preparing-the-host-system
+./creating-the-LFS-tools-directory
+./adding-the-LFS-user
+su -c $LFS/sources/constructing-a-temporary-system - lfs

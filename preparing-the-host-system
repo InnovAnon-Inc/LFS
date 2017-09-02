@@ -1,0 +1,32 @@
+#! /bin/sh
+set -exo nounset
+
+cd /mnt/lfs
+
+export LFS=/mnt/lfs
+
+test -d $LFS/sources || \
+mkdir -v $LFS/sources
+
+chmod -v a+wt $LFS/sources
+
+cd $LFS/sources
+#wget --continue www.linuxfromscratch.org/lfs/downloads/development/{wget-list,md5sums}
+for k in wget-list md5sums ; do
+	test -f $k || \
+	wget www.linuxfromscratch.org/lfs/downloads/development/$k
+done
+
+#set +e
+#wget --input-file=wget-list --continue --directory-prefix=$LFS/sources
+#set -e
+for k in `cat wget-list` ; do
+	test -f `basename $k` || \
+	wget $k
+done
+
+set +e
+pushd $LFS/sources
+md5sum -c md5sums
+popd
+set -e
