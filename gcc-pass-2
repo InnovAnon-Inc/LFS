@@ -36,10 +36,10 @@ tar -xf ../gmp-6.1.2.tar.xz
 mv -v gmp-6.1.2 gmp
 tar -xf ../mpc-1.0.3.tar.gz
 mv -v mpc-1.0.3 mpc
-if [ -f isl-0.16.1.tar.bz2 ] ; then
-	tar -xf ../isl-0.16.1.tar.bz2
-	mv isl-0.16.1 isl
-fi
+#if [ -f isl-0.16.1.tar.bz2 ] ; then
+#	tar -xf ../isl-0.16.1.tar.bz2
+#	mv isl-0.16.1 isl
+#fi
 
 mkdir -v build
 cd       build
