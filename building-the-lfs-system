@@ -3,3 +3,25 @@ set -exo nounset
 
 lfs-6.5-creating-directories
 lfs-6.6-creating-essential-files-and-symlinks
+lfs-6.7-linux-headers
+lfs-6.8-man-pages
+lfs-6.9-glibc
+lfs-6.10-adjusting-the-toolchain
+lfs-6.11-zlib
+lfs-6.12-file
+lfs-6.13-readline
+lfs-6.14-m4
+lfs-6.15-bc
+lfs-6.16-binutils
+lfs-6.17-gmp
+lfs-6.18-mpfr
+lfs-6.19-mpc
+lfs-6.20-gcc
+lfs-6.21-bzip2
+lfs-6.22-pkg-config
+lfs-6.23-ncurses
+lfs-6.24-attr
+lfs-6.25-acl
+lfs-6.26-libcap
+lfs-6.27-sed
+lfs-6.28-shadow

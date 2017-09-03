@@ -1,0 +1,10 @@
+#! /bin/sh
+set -exo nounset
+
+cd $LFS/sources
+
+rm -rf man-pages-4.12
+tar xf man-pages-4.12.tar.xz
+cd man-pages-4.12
+
+make install
