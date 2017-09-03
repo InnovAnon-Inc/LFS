@@ -1,0 +1,14 @@
+#! /bin/sh
+set -exo nounset
+
+cd $LFS/sources
+
+rm -rf dejagnu-1.6
+tar xf dejagnu-1.6.tar.gz
+cd dejagnu-1.6
+
+./configure --prefix=/tools
+
+make install
+
+make check

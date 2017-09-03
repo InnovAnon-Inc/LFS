@@ -1,0 +1,16 @@
+#! /bin/sh
+set -exo nounset
+
+cd $LFS/sources
+
+rm -rf diffutils-3.6
+tar xf diffutils-3.6.tar.xz
+cd diffutils-3.6
+
+./configure --prefix=/tools
+
+make
+
+make check
+
+make install
