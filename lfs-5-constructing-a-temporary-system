@@ -1,0 +1,40 @@
+#! /bin/sh
+set -exo nounset
+
+source ~/.bashrc
+
+cd $LFS/sources
+
+./lfs-5.4-binutils-pass-1
+./lfs-5.5-gcc-pass-1
+./lfs-5.6-linux-headers
+./lfs-5.7-glibc
+./lfs-5.8-libstdc++
+./lfs-5.9-binutils-pass-2
+./lfs-5.10-gcc-pass-2
+./lfs-5.11-tcl-core
+./lfs-5.12-expect
+./lfs-5.13-dejagnu
+./lfs-5.14-check
+./lfs-5.15-ncurses
+./lfs-5.16-bash
+./lfs-5.17-bison
+./lfs-5.18-bzip2
+./lfs-5.19-coreutils
+./lfs-5.20-diffutils
+./lfs-5.21-file
+./lfs-5.22-findutils
+./lfs-5.23-gawk
+./lfs-5.24-gettext
+./lfs-5.25-grep
+./lfs-5.26-gzip
+./lfs-5.27-m4
+./lfs-5.28-make
+./lfs-5.29-patch
+./lfs-5.30-perl
+./lfs-5.31-sed
+./lfs-5.32-tar
+./lfs-5.33-texinfo
+./lfs-5.34-util-linux
+./lfs-5.35-xz
+./lfs-5.36-stripping

@@ -1,0 +1,5 @@
+#! /bin/sh
+set -exo nounset
+
+lfs-6.5-creating-directories
+lfs-6.6-creating-essential-files-and-symlinks

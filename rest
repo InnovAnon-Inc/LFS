@@ -1,6 +1,0 @@
-#! /bin/sh
-set -exo nounset
-
-cd $LFS/sources
-
-su -c $LFS/sources/constructing-a-temporary-system-rest - lfs

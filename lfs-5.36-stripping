@@ -1,0 +1,14 @@
+#! /bin/sh
+set -exo nounset
+
+cd $LFS/sources
+
+set +e
+strip --strip-debug /tools/lib/*
+/usr/bin/strip --strip-unneeded /tools/{,s}bin/*
+set -e
+
+rm -rf /tools/{,share}/{info,man,doc}
+
+tar acf /tools.txz /tools
+cp -v /tools.txz $LFS/tools.txz

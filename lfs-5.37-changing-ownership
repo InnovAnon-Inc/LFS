@@ -1,0 +1,4 @@
+#! /bin/sh
+set -exo nounset
+
+chown -R root:root $LFS/tools
