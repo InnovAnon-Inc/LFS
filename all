@@ -2,10 +2,10 @@
 set -exo nounset
 
 export LFS=/mnt/lfs
-test ! -d $LFS ||
+test -d $LFS ||
 mkdir -v $LFS
 
-test ! -d $LFS/sources || \
+test -d $LFS/sources || \
 mkdir -v $LFS/sources
 
 find $LFS/sources -mindepth 1 -maxdepth 1 -type f -executable -delete
