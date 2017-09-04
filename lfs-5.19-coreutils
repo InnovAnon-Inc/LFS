@@ -3,9 +3,9 @@ set -exo nounset
 
 cd $LFS/sources
 
-rm -rf coreutils-8.27
-tar xf coreutils-8.27.tar.xz
-cd coreutils-8.27
+rm -rf coreutils-8.28
+tar xf coreutils-8.28.tar.xz
+cd coreutils-8.28
 
 ./configure --prefix=/tools --enable-install-program=hostname
 

@@ -3,9 +3,9 @@ set -exo nounset
 
 cd $LFS/sources
 
-rm -rf linux-4.12.7
-tar xf linux-4.12.7.tar.xz
-cd linux-4.12.7
+rm -rf linux-4.12.10
+tar xf linux-4.12.10.tar.xz
+cd linux-4.12.10
 
 make mrproper
 
