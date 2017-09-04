@@ -13,6 +13,7 @@ sed -i 's:\\\${:\\\$\\{:' intltool-update.in
 
 make
 
+test -z ${LFS_TEST+x} || \
 make check
 
 make install

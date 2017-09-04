@@ -11,6 +11,7 @@ cd coreutils-8.27
 
 make
 
+test -z ${LFS_TEST+x} || \
 make RUN_EXPENSIVE_TESTS=yes check
 
 make install

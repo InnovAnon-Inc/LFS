@@ -30,6 +30,7 @@ make
 
 ulimit -s 32768
 
+test -z ${LFS_TEST+x} || \
 make -k check
 
 ../contrib/test_summary

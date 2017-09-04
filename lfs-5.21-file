@@ -11,6 +11,7 @@ cd file-5.31
 
 make
 
+test -z ${LFS_TEST+x} || \
 make check
 
 make install

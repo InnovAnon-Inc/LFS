@@ -16,6 +16,7 @@ sed 's:/usr/local/bin:/bin:' configure.orig > configure
 
 make
 
+test -z ${LFS_TEST+x} || \
 make test
 
 make SCRIPTS="" install

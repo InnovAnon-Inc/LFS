@@ -11,6 +11,7 @@ cd m4-1.14.18
 
 make
 
+test -z ${LFS_TEST+x} || \
 make check
 
 make install

@@ -13,6 +13,7 @@ sed -i 's/test-lock..EXEEXT.//' tests/Makefile.in
 
 make
 
+test -z ${LFS_TEST+x} || \
 make check
 
 make install

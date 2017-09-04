@@ -19,6 +19,7 @@ cd man-db-2.7.6.1
 
 make
 
+test -z ${LFS_TEST+x} || \
 make check
 
 make install

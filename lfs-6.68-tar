@@ -16,6 +16,7 @@ FORCE_UNSAFE_CONFIGURE=1  \
 
 make
 
+test -z ${LFS_TEST+x} || \
 make check
 
 make install

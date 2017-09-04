@@ -16,6 +16,7 @@ sed -i 's|usr/bin/env |bin/|' run.sh.in
 make
 
 
+test -z ${LFS_TEST+x} || \
 make check
 
 make install

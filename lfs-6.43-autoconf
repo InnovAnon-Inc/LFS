@@ -11,6 +11,7 @@ cd autoconf-2.69
 
 make
 
+test -z ${LFS_TEST+x} || \
 make check
 
 make install

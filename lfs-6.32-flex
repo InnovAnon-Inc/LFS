@@ -17,6 +17,7 @@ HELP2MAN=/tools/bin/true \
 
 make
 
+test -z ${LFS_TEST+x} || \
 make check
 
 make install

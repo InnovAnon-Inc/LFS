@@ -44,6 +44,7 @@ sed -i -e '/flex/s/as_fn_error/: ;; # &/' configure
 
 make
 
+test -z ${LFS_TEST+x} || \
 echo "quit" | ./bc/bc -l Test/checklib.b
 
 make install

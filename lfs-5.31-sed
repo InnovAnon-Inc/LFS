@@ -11,6 +11,7 @@ cd sed-4.4
 
 make
 
+test -z ${LFS_TEST+x} || \
 make check
 
 make install

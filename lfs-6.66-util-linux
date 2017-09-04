@@ -30,6 +30,7 @@ make
 #bash tests/run.sh --srcdir=$PWD --builddir=$PWD
 
 chown -Rv nobody .
+test -z ${LFS_TEST+x} || \
 su nobody -s /bin/bash -c "PATH=$PATH make -k check"
 
 make install

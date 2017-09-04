@@ -23,8 +23,10 @@ make
 
 chown -Rv nobody .
 
+test -z ${LFS_TEST+x} || \
 su nobody -s /bin/bash -c "PATH=$PATH make tests"
 
+test -z ${LFS_TEST+x} || \
 make check
 
 make install

@@ -11,4 +11,5 @@ PKG_CONFIG= ./configure --prefix=/tools
 
 make
 
+test -z ${LFS_TEST+x} || \
 make check

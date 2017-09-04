@@ -16,6 +16,7 @@ sed -i 's/test-lock..EXEEXT.//' gettext-tools/gnulib-tests/Makefile.in
 
 make
 
+test -z ${LFS_TEST+x} || \
 make check
 
 make install

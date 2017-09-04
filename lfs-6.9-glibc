@@ -44,6 +44,7 @@ unset GCC_INCDIR
 make
 
 
+test -z ${LFS_TEST+x} || \
 make check
 
 touch /etc/ld.so.conf

@@ -14,6 +14,7 @@ cd pkg-config-0.29.2
 
 make
 
+test -z ${LFS_TEST+x} || \
 make check
 
 make install

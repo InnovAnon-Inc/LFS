@@ -15,6 +15,7 @@ sed -i '/call/{s/split/xsplit/;s/303/492/}' src/testdir/test_recover.vim
 
 make
 
+test -z ${LFS_TEST+x} || \
 make -j1 test &> vim-test.log
 
 make install

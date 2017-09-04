@@ -15,7 +15,7 @@ cd gdbm-1.13
 
 make
 
-
+test -z ${LFS_TEST+x} || \
 make check
 
 make install

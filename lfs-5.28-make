@@ -11,6 +11,7 @@ cd make-4.2.1
 
 make
 
+test -z ${LFS_TEST+x} || \
 make check
 
 make install

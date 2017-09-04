@@ -15,6 +15,7 @@ sed -i 's/testsuite.panic-tests.sh//' Makefile.in
 make
 make html
 
+test -z ${LFS_TEST+x} || \
 make check
 
 make install

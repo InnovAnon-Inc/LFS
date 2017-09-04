@@ -30,6 +30,7 @@ sh Configure -des -Dprefix=/usr                 \
 
 make
 
+test -z ${LFS_TEST+x} || \
 make -k test
 
 make install

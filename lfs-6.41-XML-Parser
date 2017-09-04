@@ -11,6 +11,7 @@ perl Makefile.PL
 
 make
 
+test -z ${LFS_TEST+x} || \
 make test
 
 make install

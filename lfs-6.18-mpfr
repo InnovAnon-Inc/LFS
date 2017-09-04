@@ -15,6 +15,7 @@ cd mpfr-3.1.5
 make
 make html
 
+test -z ${LFS_TEST+x} || \
 make check
 
 make install

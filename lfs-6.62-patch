@@ -11,6 +11,7 @@ cd patch-2.7.5
 
 make
 
+test -z ${LFS_TEST+x} || \
 make check
 
 make install

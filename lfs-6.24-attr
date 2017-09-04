@@ -19,6 +19,7 @@ sed -i 's:{(:\\{(:' test/run
 
 make
 
+test -z ${LFS_TEST+x} || \
 make -j1 tests root-tests
 
 make install install-dev install-lib

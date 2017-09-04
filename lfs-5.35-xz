@@ -11,6 +11,7 @@ cd xz-5.2.3
 
 make
 
+test -z ${LFS_TEST+x} || \
 make check
 
 make install

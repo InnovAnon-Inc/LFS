@@ -13,7 +13,7 @@ cd gperf-3.1
 
 make
 
-
+test -z ${LFS_TEST+x} || \
 make -j1 check
 
 make install

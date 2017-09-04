@@ -12,6 +12,7 @@ cd unix
 
 make
 
+test -z ${LFS_TEST+x} || \
 TZ=UTC make test
 
 make install

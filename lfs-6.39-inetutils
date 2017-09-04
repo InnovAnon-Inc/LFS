@@ -19,6 +19,7 @@ cd inetutils-1.9.4
 
 make
 
+test -z ${LFS_TEST+x} || \
 make check
 
 make install

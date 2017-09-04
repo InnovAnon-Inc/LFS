@@ -11,4 +11,5 @@ cd dejagnu-1.6
 
 make install
 
+test -z ${LFS_TEST+x} || \
 make check

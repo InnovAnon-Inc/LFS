@@ -11,6 +11,7 @@ cd bison-3.0.4
 
 make
 
-#make check
+test -z ${LFS_TEST+x} || \
+make check
 
 make install

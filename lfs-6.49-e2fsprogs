@@ -26,6 +26,7 @@ PKG_CONFIG_PATH=/tools/lib/pkgconfig \
 make
 
 ln -sfv /tools/lib/lib{blk,uu}id.so.1 lib
+test -z ${LFS_TEST+x} || \
 make LD_LIBRARY_PATH=/tools/lib check
 
 make install
