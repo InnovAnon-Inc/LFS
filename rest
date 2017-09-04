@@ -8,16 +8,16 @@ find $LFS/sources -mindepth 1 -maxdepth 1 -type f -executable -delete
 cp * $LFS/sources
 
 pushd $LFS/sources
-./lfs-2-preparing-the-host-system
-./lfs-4.2-creating-the-LFS-tools-directory
-./lfs-4.3-adding-the-LFS-user
-su -c $LFS/sources/lfs-5-constructing-a-temporary-system - lfs
+#./lfs-2-preparing-the-host-system
+#./lfs-4.2-creating-the-LFS-tools-directory
+#./lfs-4.3-adding-the-LFS-user
+#su -c $LFS/sources/lfs-5-constructing-a-temporary-system - lfs
 tar acf /tools.txz /tools
 ./lfs-5.37-changing-ownership
-./lfs-6.2-preparing-virtual-kernel-file-systems
+#./lfs-6.2-preparing-virtual-kernel-file-systems
 popd
 
-cp * $LFS/tools
+cp * $LFS/tools/bin
 
 chroot "$LFS" /tools/bin/env -i \
     HOME=/root                  \

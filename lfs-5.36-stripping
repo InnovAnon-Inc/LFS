@@ -10,5 +10,5 @@ set -e
 
 rm -rf /tools/{,share}/{info,man,doc}
 
-tar acf /tools.txz /tools
-cp -v /tools.txz $LFS/tools.txz
+#tar acf /tools.txz /tools
+#cp -v /tools.txz $LFS/tools.txz
