@@ -1,4 +1,4 @@
-#! /bin/sh
+#! /bin/bash
 set -exo nounset
 
 sh lfs-6.5-creating-directories

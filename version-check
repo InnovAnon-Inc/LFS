@@ -1,4 +1,4 @@
-#! /bin/sh
+#! /bin/bash
 set -eo nounset
 
 # Simple script to list version numbers of critical development tools
