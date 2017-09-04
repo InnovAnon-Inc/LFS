@@ -1,15 +1,15 @@
 #! /bin/sh
 set -exo nounset
 
-#sh lfs-6.5-creating-directories
-#sh lfs-6.6-creating-essential-files-and-symlinks
-#sh lfs-6.7-linux-headers
-#sh lfs-6.8-man-pages
-#sh lfs-6.9-glibc
-#sh lfs-6.10-adjusting-the-toolchain
-#sh lfs-6.11-zlib
-#sh lfs-6.12-file
-#sh lfs-6.13-readline
+sh lfs-6.5-creating-directories
+sh lfs-6.6-creating-essential-files-and-symlinks
+sh lfs-6.7-linux-headers
+sh lfs-6.8-man-pages
+sh lfs-6.9-glibc
+sh lfs-6.10-adjusting-the-toolchain
+sh lfs-6.11-zlib
+sh lfs-6.12-file
+sh lfs-6.13-readline
 sh lfs-6.14-m4
 sh lfs-6.15-bc
 sh lfs-6.16-binutils
