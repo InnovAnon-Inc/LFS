@@ -1,4 +1,4 @@
-#! /bin/sh
+#! /bin/bash
 set -exo nounset
 
 mkdir -pv /{bin,boot,etc/{opt,sysconfig},home,lib/firmware,mnt,opt}
