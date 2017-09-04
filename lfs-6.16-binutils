@@ -30,3 +30,11 @@ test -z ${LFS_TEST+x} || \
 make -k check
 
 make tooldir=/usr install
+
+
+
+
+
+
+cd $LFS/sources
+rm -rf binutils-2.29

@@ -17,3 +17,12 @@ test -z ${LFS_TEST+x} || \
 make -j1 check
 
 make install
+
+
+
+
+
+
+
+cd $LFS/sources
+rm -rf gperf-3.1

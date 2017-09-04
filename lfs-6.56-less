@@ -12,3 +12,11 @@ cd less-487
 make
 
 make install
+
+
+
+
+
+
+cd $LFS/sources
+rm -rf less-487

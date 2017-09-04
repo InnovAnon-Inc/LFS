@@ -164,3 +164,16 @@ include /etc/ld.so.conf.d/*.conf
 
 EOF
 mkdir -pv /etc/ld.so.conf.d
+
+
+
+
+
+
+
+
+
+
+
+cd $LFS/sources
+rm -rf glibc-2.26

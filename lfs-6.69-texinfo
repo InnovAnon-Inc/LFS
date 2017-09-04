@@ -24,3 +24,11 @@ for f in *
   do install-info $f dir 2>/dev/null
 done
 popd
+
+
+
+
+
+
+cd $LFS/sources
+rm -rf texinfo-6.4

@@ -24,3 +24,12 @@ make install
 
 mkdir -v       /usr/share/doc/kbd-2.0.4
 cp -R -v docs/doc/* /usr/share/doc/kbd-2.0.4
+
+
+
+
+
+
+
+cd $LFS/sources
+rm -rf kbd-2.0.4

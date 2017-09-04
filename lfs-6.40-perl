@@ -35,3 +35,12 @@ make -k test
 
 make install
 unset BUILD_ZLIB BUILD_BZIP2
+
+
+
+
+
+
+
+cd $LFS/sources
+rm -rf perl-5.26.0

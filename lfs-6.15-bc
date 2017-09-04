@@ -48,3 +48,11 @@ test -z ${LFS_TEST+x} || \
 echo "quit" | ./bc/bc -l Test/checklib.b
 
 make install
+
+
+
+
+
+
+cd $LFS/sources
+rm -rf bc-1.07.1

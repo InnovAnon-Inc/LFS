@@ -15,3 +15,11 @@ test -z ${LFS_TEST+x} || \
 make test
 
 make install
+
+
+
+
+
+
+cd $LFS/sources
+rm -rf XML-Parser-2.44

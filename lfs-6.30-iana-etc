@@ -10,3 +10,11 @@ cd iana-etc-2.30
 make
 
 make install
+
+
+
+
+
+
+cd $LFS/sources
+rm -rf iana-etc-2.30

@@ -34,3 +34,11 @@ test -z ${LFS_TEST+x} || \
 su nobody -s /bin/bash -c "PATH=$PATH make -k check"
 
 make install
+
+
+
+
+
+
+cd $LFS/sources
+rm -rf util-linux-2.30.1

@@ -18,3 +18,12 @@ test -z ${LFS_TEST+x} || \
 make check
 
 make install
+
+
+
+
+
+
+
+cd $LFS/sources
+rm -rf pkg-config-0.29.2

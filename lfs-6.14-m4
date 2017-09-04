@@ -15,3 +15,11 @@ test -z ${LFS_TEST+x} || \
 make check
 
 make install
+
+
+
+
+
+
+cd $LFS/sources
+rm -rf m4-1.14.18

@@ -54,3 +54,12 @@ vim -c ':options'
 
 #set spelllang=en,ru
 #set spell
+
+
+
+
+
+
+
+cd $LFS/sources
+rm -rf vim-8.0.586

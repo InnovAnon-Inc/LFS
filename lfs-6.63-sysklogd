@@ -28,3 +28,11 @@ user.* -/var/log/user.log
 
 # End /etc/syslog.conf
 EOF
+
+
+
+
+
+
+cd $LFS/sources
+rm -rf sysklogd-1.5.1

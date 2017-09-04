@@ -20,3 +20,11 @@ make install
 
 mv -v /usr/bin/find /bin
 sed -i 's|find:=${BINDIR}|find:=/bin|' /usr/bin/updatedb
+
+
+
+
+
+
+cd $LFS/sources
+rm -rf findutils-4.6.0

@@ -15,3 +15,11 @@ test -z ${LFS_TEST+x} || \
 make PERL5LIB=$PWD/tests/ check
 
 make install
+
+
+
+
+
+
+cd $LFS/sources
+rm -rf make-4.2.1

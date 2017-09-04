@@ -12,3 +12,11 @@ cd bison-3.0.4
 make
 
 make install
+
+
+
+
+
+
+cd $LFS/sources
+rm -rf bison-3.0.4

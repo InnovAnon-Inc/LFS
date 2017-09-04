@@ -19,3 +19,12 @@ test -z ${LFS_TEST+x} || \
 make check
 
 make install
+
+
+
+
+
+
+
+cd $LFS/sources
+rm -rf gdbm-1.13

@@ -27,3 +27,11 @@ chmod -v 755 /usr/lib/libattr.so
 
 mv -v /usr/lib/libattr.so.* /lib
 ln -sfv ../../lib/$(readlink /usr/lib/libattr.so) /usr/lib/libattr.so
+
+
+
+
+
+
+cd $LFS/sources
+rm -rf attr-2.4.47

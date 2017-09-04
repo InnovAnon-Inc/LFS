@@ -17,3 +17,11 @@ make check
 make install
 
 mv -v /usr/bin/gzip /bin
+
+
+
+
+
+
+cd $LFS/sources
+rm -rf gzip-1.8

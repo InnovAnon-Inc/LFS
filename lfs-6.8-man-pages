@@ -8,3 +8,11 @@ tar xf man-pages-4.12.tar.xz
 cd man-pages-4.12
 
 make install
+
+
+
+
+
+
+cd $LFS/sources
+rm -rf man-pages-4.12

@@ -16,3 +16,11 @@ cd grub-2.02
 make
 
 make install
+
+
+
+
+
+
+cd $LFS/sources
+rm -rf grub-2.02

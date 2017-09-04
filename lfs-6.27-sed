@@ -21,3 +21,11 @@ make check
 make install
 install -d -m755           /usr/share/doc/sed-4.4
 install -m644 doc/sed.html /usr/share/doc/sed-4.4
+
+
+
+
+
+
+cd $LFS/sources
+rm -rf sed-4.4

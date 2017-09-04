@@ -19,3 +19,12 @@ make -j4 check
 
 
 make install
+
+
+
+
+
+
+
+cd $LFS/sources
+rm -rf automake-1.15.1

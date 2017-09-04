@@ -18,3 +18,11 @@ make install
 
 mv -v /usr/lib/libz.so.* /lib
 ln -sfv ../../lib/$(readlink /usr/lib/libz.so) /usr/lib/libz.so
+
+
+
+
+
+
+cd $LFS/sources
+rm -rf zlib-1.2.11

@@ -21,3 +21,11 @@ make check
 
 make install
 make -C doc install-html docdir=/usr/share/doc/tar-1.29
+
+
+
+
+
+
+cd $LFS/sources
+rm -rf tar-1.29

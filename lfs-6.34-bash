@@ -35,3 +35,11 @@ mv -vf /usr/bin/bash /bin
 
 
 #exec /bin/bash --login +h
+
+
+
+
+
+
+cd $LFS/sources
+rm -rf bash-4.4

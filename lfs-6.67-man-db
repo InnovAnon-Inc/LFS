@@ -23,3 +23,11 @@ test -z ${LFS_TEST+x} || \
 make check
 
 make install
+
+
+
+
+
+
+cd $LFS/sources
+rm -rf man-db-2.7.6.1

@@ -20,3 +20,12 @@ make check
 
 make install
 make install-html
+
+
+
+
+
+
+
+cd $LFS/sources
+rm -rf mpfr-3.1.5
