@@ -3,6 +3,8 @@ set -exo nounset
 
 export LFS=/mnt/lfs
 
+find $LFS/sources -mindepth 1 -maxdepth 1 -type f -executable -delete
+
 cp * $LFS/sources
 
 pushd $LFS/sources
