@@ -1,0 +1,21 @@
+#! /bin/sh
+set -exo nounset
+
+cd $LFS/sources
+
+rm -rf gdbm-1.13
+tar xf gdbm-1.13.tar.gz
+cd gdbm-1.13
+
+
+./configure --prefix=/usr \
+            --disable-static \
+            --enable-libgdbm-compat
+
+
+make
+
+
+make check
+
+make install

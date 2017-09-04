@@ -1,0 +1,16 @@
+#! /bin/sh
+set -exo nounset
+
+cd $LFS/sources
+
+rm -rf libpipeline-1.4.2
+tar xf libpipeline-1.4.2.tar.gz
+cd libpipeline-1.4.2
+
+PKG_CONFIG_PATH=/tools/lib/pkgconfig ./configure --prefix=/usr
+
+make
+
+make check
+
+make install
