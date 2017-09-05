@@ -65,6 +65,6 @@ set -exo nounset
 #sh lfs-6.66-util-linux
 #sh lfs-6.67-man-db
 #sh lfs-6.68-tar
-sh lfs-6.69-texinfo
+#sh lfs-6.69-texinfo
 sh lfs-6.70-vim
 sh lfs-6.72-stripping-again-1

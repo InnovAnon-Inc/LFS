@@ -22,7 +22,7 @@ tar acf /tools.txz /tools
 ./lfs-6.2-preparing-virtual-kernel-file-systems
 popd
 
-cp * $LFS/tools
+cp * $LFS/tools/bin
 
 chroot "$LFS" /tools/bin/env -i \
     HOME=/root                  \
