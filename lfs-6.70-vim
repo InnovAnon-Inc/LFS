@@ -3,9 +3,9 @@ set -exo nounset
 
 cd $LFS/sources
 
-rm -rf vim-8.0.586
+rm -rf vim80
 tar xf vim-8.0.586.tar.bz2
-cd vim-8.0.586
+cd vim80
 
 echo '#define SYS_VIMRC_FILE "/etc/vimrc"' >> src/feature.h
 

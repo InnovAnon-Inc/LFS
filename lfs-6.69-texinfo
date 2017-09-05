@@ -14,7 +14,7 @@ make
 test -z ${LFS_TEST+x} || \
 make check
 
-make insatll
+make install
 
 make TEXMF=/usr/share/texmf install-tex
 
