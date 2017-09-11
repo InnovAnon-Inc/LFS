@@ -1,0 +1,21 @@
+check all tool repos
+if anything has been updated
+
+OR
+
+check wget-list
+if any tool has been updated
+
+updated tools
+recompile base system
+
+
+
+if any base system package has been updated
+recompile base system
+
+
+
+
+after recompiling base system
+remake all src/bin packages
