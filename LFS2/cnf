@@ -37,8 +37,11 @@ ROOTFSMNT=$LFS
 #SWAP=${NAME}6
 #SWAPDEV=/dev/$SWAP
 
+# Creating a File System on the Partition
 SKIP_LFS_2_5=YES
+# Creating the LFS/tools Directory
 SKIP_LFS_4_2=YES
+# Adding the LFS User
 SKIP_LFS_4_3=YES
 
 LFS_URL=www.linuxfromscratch.org/lfs/downloads/development
