@@ -1,5 +1,5 @@
 #! /bin/sh
-set -eo nounset
+set -exo nounset
 
 test $# -ne 0
 
@@ -9,5 +9,13 @@ cd $D
 
 . ./cnf
 
-su -c $* - lfs
+A=$1
+shift
+
+#su -c "$*" - lfs
+#su - lfs -c "$A $*" -- "$*"
+su - lfs << EOF
+source ~/.bashrc
+$A $*
+EOF
 
