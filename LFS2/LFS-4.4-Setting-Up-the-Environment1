@@ -1,0 +1,11 @@
+#! /bin/sh
+set -eo nounset
+
+F=`readlink -f $0`
+D=`dirname $F`
+cd $D
+
+. ./cnf
+
+source ~/.bash_profile
+

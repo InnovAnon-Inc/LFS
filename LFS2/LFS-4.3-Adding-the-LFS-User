@@ -1,0 +1,19 @@
+#! /bin/sh
+set -eo nounset
+
+F=`readlink -f $0`
+D=`dirname $F`
+cd $D
+
+. ./cnf
+
+if [ -z ${SKIP_LFS_4_3+x} ] ; then
+	groupadd lfs
+	useradd -s /bin/bash -g lfs -m -k /dev/null lfs
+
+	#passwd lfs
+fi
+
+chown -v lfs $LFS/tools
+chown -v lfs $SRCS
+

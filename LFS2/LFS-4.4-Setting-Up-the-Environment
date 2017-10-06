@@ -1,0 +1,13 @@
+#! /bin/sh
+set -eo nounset
+
+F=`readlink -f $0`
+D=`dirname $F`
+cd $D
+
+. ./cnf
+
+cp -v .bash_profile ~/.bash_profile
+#cp -v .bashrc ~/.bashrc
+sed "s@LFS=/mnt/lfs@LFS=$LFS@" .bashrc > ~/.bashrc
+

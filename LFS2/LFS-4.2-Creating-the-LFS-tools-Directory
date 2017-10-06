@@ -1,0 +1,27 @@
+#! /bin/sh
+set -eo nounset
+
+F=`readlink -f $0`
+D=`dirname $F`
+cd $D
+
+. ./cnf
+
+if [ -d $LFS/tools ] \
+&& [ -z ${SKIP_LFS_4_2+x} ] ; then
+	rm -rfv $LFS/tools
+fi
+
+if [ ! -d $LFS/tools ]  ; then
+	mkdir -v $LFS/tools
+fi
+
+if [ -L /tools ] \
+&& [ -z ${SKIP_LFS_4_2+x} ] ; then
+	rm -fv /tools
+fi
+
+if [ ! -L /tools ] ; then
+	ln -sv $LFS/tools /
+fi
+

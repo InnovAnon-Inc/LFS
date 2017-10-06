@@ -1,0 +1,29 @@
+#! /bin/sh
+set -eo nounset
+
+F=`readlink -f $0`
+D=`dirname $F`
+cd $D
+
+. ./cnf
+
+# /efi
+if [ ! -z ${EFIFSDEV+x} ] ; then
+	umount -v -f $EFIFSMNT || :
+fi
+
+# /boot
+if [ ! -z ${BOOTFSDEV+x} ] ; then
+	umount -v -f $BOOTFSMNT || :
+fi
+
+# / /etc
+umount -v -f $ROOTFSMNT || :
+
+# TODO
+
+# (swap)
+if [ ! -z ${SWAPDEV+x} ] ; then
+	swapoff -v -f $SWAPDEV || :
+fi
+

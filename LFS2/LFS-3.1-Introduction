@@ -1,0 +1,28 @@
+#! /bin/sh
+set -eo nounset
+
+F=`readlink -f $0`
+D=`dirname $F`
+cd $D
+
+. ./cnf
+
+mkdir -pv $SRCS
+chmod -v a+wt $SRCS
+cd $SRCS
+
+for k in wget-list md5sums ; do
+	test -f $k || \
+	wget $LFS_URL/$k
+done
+
+cat wget-list | \
+while read k ; do
+	test -f `basename $k` || \
+	wget $k || :
+done
+
+set +e
+md5sum -c md5sums
+set -e
+

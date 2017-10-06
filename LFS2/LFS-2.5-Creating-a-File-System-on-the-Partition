@@ -1,0 +1,32 @@
+#! /bin/sh
+set -eo nounset
+
+F=`readlink -f $0`
+D=`dirname $F`
+cd $D
+
+. ./cnf
+
+# TODO we should verify that the correct file systems are on these partitions
+if [ ! -z ${SKIP_LFS_2_5+x} ] ; then exit 0 ; fi
+
+# /efi
+if [ ! -z ${EFIFSDEV+x} ] ; then
+	mkfs -v -t vfat $EFIFSDEV
+fi
+
+# /boot
+if [ ! -z ${BOOTFSDEV+x} ] ; then
+	mkfs -v -t ext4 $BOOTFSDEV
+fi
+
+# / /etc
+mkfs -v -t ext4 $ROOTFSDEV
+
+# TODO
+
+# (swap)
+if [ ! -z ${SWAPDEV+x} ] ; then
+	mkswap $SWAPDEV
+fi
+

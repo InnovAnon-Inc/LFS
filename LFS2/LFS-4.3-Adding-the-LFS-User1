@@ -1,0 +1,13 @@
+#! /bin/sh
+set -eo nounset
+
+test $# -ne 0
+
+F=`readlink -f $0`
+D=`dirname $F`
+cd $D
+
+. ./cnf
+
+su -c $* - lfs
+
