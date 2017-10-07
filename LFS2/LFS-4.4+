@@ -1,0 +1,15 @@
+#! /bin/bash
+set -eo nounset
+
+F=`readlink -f $0`
+D=`dirname $F`
+cd $D
+
+. ./cnf
+
+./LFS-4.4-Setting-Up-the-Environment
+# unnecessary: LFS-4.4-Setting-Up-the-Environment1
+./LFS-5.3-General-Compilation-Instructions
+./LFS-5.3+
+./LFS-5.36-Stripping
+./LFS-5.37-Changing-Ownership

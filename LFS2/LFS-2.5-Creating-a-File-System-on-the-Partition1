@@ -1,0 +1,16 @@
+#! /bin/sh
+set -eo nounset
+
+test $# -ne 0
+
+F=`readlink -f $0`
+D=`dirname $F`
+cd $D
+
+. ./cnf
+
+./LFS-2.5-Creating-a-File-System-on-the-Partition0
+trap "./LFS-2.5-Creating-a-File-System-on-the-Partition0" 0
+./LFS-2.5-Creating-a-File-System-on-the-Partition
+
+$*

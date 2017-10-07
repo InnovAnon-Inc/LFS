@@ -1,7 +1,5 @@
-SRCS=/mnt/home/sources
-#SRCS=/storage_one/sources
-TOOLSBKF=/mnt/home/tools.txz
-#TOOLSBKF=$SRCS/tools.txz
+SRCS=/storage_one/sources
+TOOLSBKF=$SRCS/tools.txz
 
 NAME=sdc
 export LFS=/mnt/lfs
@@ -45,7 +43,7 @@ SKIP_TESTS=YES
 # Creating a File System on the Partition
 SKIP_LFS_2_5=YES
 # Mounting the New Parition
-#SKIP_LFS_2_7=YES
+SKIP_LFS_2_7=YES
 # Creating the LFS/tools Directory
 #SKIP_LFS_4_2=YES
 # Adding the LFS User

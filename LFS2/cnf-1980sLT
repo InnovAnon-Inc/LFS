@@ -1,0 +1,59 @@
+SRCS=/mnt/home/sources
+TOOLSBKF=/mnt/home/tools.txz
+
+NAME=sdc
+export LFS=/mnt/lfs
+
+# /efi
+EFIFS=${NAME}1
+EFIDEV=/dev/$EFIFS
+EFIMNT=$LFS/efi
+
+# /boot
+#BOOTFS=${NAME}2
+#BOOTDEV=/dev/$BOOTFS
+#BOOTMNT=$LFS/boot
+
+# / /etc
+ROOTFS=${NAME}2
+ROOTFSDEV=/dev/$ROOTFS
+ROOTFSMNT=$LFS
+
+# /usr
+#USRFS=${NAME}4
+#USRFSDEV=/dev/$USRFS
+#USRFSMNT=$LFS/usr
+
+# /usr/src
+#USRSRCFS=${NAME}5
+#USRSRCFSDEV=/dev/$USRSRCFS
+#USRSRCFSMNT=$LFS/usr/src
+
+# /home
+# /opt
+# /tmp
+# /var/*
+
+# (swap)
+#SWAP=${NAME}6
+#SWAPDEV=/dev/$SWAP
+
+SKIP_TESTS=YES
+
+# Creating a File System on the Partition
+SKIP_LFS_2_5=YES
+# Mounting the New Parition
+#SKIP_LFS_2_7=YES
+# Creating the LFS/tools Directory
+#SKIP_LFS_4_2=YES
+# Adding the LFS User
+SKIP_LFS_4_3=YES
+
+LFS_URL=www.linuxfromscratch.org/lfs/downloads/development
+#LFS_URL=www.linuxfromscratch.org/lfs/downloads/stable
+
+# LFS 4.5 About SBUs
+NPROC=`getconf _NPROCESSORS_ONLN`
+export MAKEFLAGS=`expr $NPROC + 1`
+#export CFLAGS='-march=native -g0 -fmerge-all-constants -fipa-pta'
+

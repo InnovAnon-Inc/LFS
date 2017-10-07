@@ -14,5 +14,5 @@ umount -f $LFS/dev/pts
 
 umount -f $LFS/dev
 
-./LFS-2.5-Creating-a-File-System-on-the-Partition0
+#./LFS-2.5-Creating-a-File-System-on-the-Partition0
 
