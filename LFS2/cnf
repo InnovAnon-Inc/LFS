@@ -38,6 +38,8 @@ ROOTFSMNT=$LFS
 #SWAP=${NAME}6
 #SWAPDEV=/dev/$SWAP
 
+SKIP_TESTS=YES
+
 # Creating a File System on the Partition
 SKIP_LFS_2_5=YES
 # Mounting the New Parition
