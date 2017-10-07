@@ -13,6 +13,7 @@ cat $SRCS/wget-list | \
 while read k ; do
 	B=`basename $k`
 	echo $B | \
+	grep -v \\.patch | \
 	grep -q ^$1 || \
 	continue
 	echo $B
