@@ -1,4 +1,4 @@
-#! /bin/sh
+#! /bin/bash
 set -eo nounset
 
 F=`readlink -f $0`

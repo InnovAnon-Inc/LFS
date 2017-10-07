@@ -1,4 +1,4 @@
-#! /bin/sh
+#! /bin/bash
 set -eo nounset
 
 test $# -eq 3 || test $# -eq 2
