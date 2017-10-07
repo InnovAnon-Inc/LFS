@@ -1,1 +1,2 @@
+test ! -z ${SKIP_TESTS+x} || \
 make check

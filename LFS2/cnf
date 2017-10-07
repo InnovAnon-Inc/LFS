@@ -1,4 +1,5 @@
 SRCS=/mnt/home/sources
+TOOLSBKF=/mnt/home/tools.txz
 
 NAME=sdc
 export LFS=/mnt/lfs
@@ -47,8 +48,10 @@ SKIP_LFS_2_5=YES
 SKIP_LFS_4_3=YES
 
 LFS_URL=www.linuxfromscratch.org/lfs/downloads/development
+#LFS_URL=www.linuxfromscratch.org/lfs/downloads/stable
 
 # LFS 4.5 About SBUs
 NPROC=`getconf _NPROCESSORS_ONLN`
 export MAKEFLAGS=`expr $NPROC + 1`
+export CFLAGS='-march=native -g0 -fmerge-all-constants -fipa-pta'
 
