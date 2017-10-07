@@ -9,20 +9,20 @@ cd $D
 
 # / /etc
 mkdir -pv $ROOTFSMNT
-test -z ${SKIP_LFS_2_7+x} || \
+test ! -z ${SKIP_LFS_2_7+x} || \
 mount -v -t ext4 $ROOTFSDEV $ROOTFSMNT
 
 # /boot
 if [ ! -z ${BOOTFSDEV+x} ] ; then
 	mkdir -pv $BOOTFSMNT
-	test -z ${SKIP_LFS_2_7+x} || \
+	test ! -z ${SKIP_LFS_2_7+x} || \
 	mount -v -t ext4 $BOOTFSDEV $BOOTFSMNT
 fi
 
 # /efi
 if [ ! -z ${EFIFSDEV+x} ] ; then
 	mkdir -pv $EFIFSMNT
-	test -z ${SKIP_LFS_2_7+x} || \
+	test ! -z ${SKIP_LFS_2_7+x} || \
 	mount -v -t vfat $EFIFSDEV $EFIFSMNT
 fi
 
@@ -30,7 +30,7 @@ fi
 
 # (swap)
 if [ ! -z ${SWAPDEV+x} ] ; then
-	test -z ${SKIP_LFS_2_7+x} || \
+	test ! -z ${SKIP_LFS_2_7+x} || \
 	swapon -v $SWAPDEV
 fi
 
