@@ -1,0 +1,15 @@
+#! /bin/sh
+set -eo nounset
+
+F=`readlink -f $0`
+D=`dirname $F`
+cd $D
+
+. ./cnf
+
+umount -f $LFS/run
+umount -f $LFS/sys
+umount -f $LFS/proc
+umount -f $LFS/dev/pts
+
+umount -f $LFS/dev
