@@ -7,6 +7,8 @@ cd $D
 
 . ./cnf
 
+if [ ! -z ${SKIP_LFS_2_7+x} ] ; then exit 0 ; fi
+
 # / /etc
 mkdir -pv $ROOTFSMNT
 mount -v -t ext4 $ROOTFSDEV $ROOTFSMNT

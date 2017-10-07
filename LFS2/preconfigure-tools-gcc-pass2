@@ -1,0 +1,5 @@
+# a.k.a. LFS 5.8.1 Installation of Target Libstc++
+
+mkdir -v build
+cd       build
+

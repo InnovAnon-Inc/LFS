@@ -1,0 +1,1 @@
+sh Configure -des -Dprefix=/tools -Dlibs=-lm

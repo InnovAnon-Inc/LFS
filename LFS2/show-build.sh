@@ -1,7 +1,7 @@
 #! /bin/sh
 set -eo nounset
 
-test $# -eq 3 || test $# -eq 2
+test $# -eq 3 || $# -eq 2
 
 F=`readlink -f $0`
 D=`dirname $F`
@@ -28,6 +28,6 @@ for k in \
 	K=`$D/build-helper.sh $* $k`
 	test ! -z "$K" || \
 	continue
-	. $K
+	echo . $K
 done
 

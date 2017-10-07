@@ -1,0 +1,8 @@
+ln -sv gcc /tools/bin/cc
+
+echo 'int main(){}' > dummy.c
+cc dummy.c
+readelf -l a.out | grep ': /tools' | \
+grep -q '[Requesting program interpreter: /tools/lib/ld-linux.so.2]'
+
+rm -v dummy.c a.out

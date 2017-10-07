@@ -7,4 +7,4 @@ cd $D
 
 . ./cnf
 
-./build.sh binutils tools pass1
+chown -R root:root $LFS/tools

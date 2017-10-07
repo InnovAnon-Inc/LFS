@@ -1,5 +1,5 @@
 #! /bin/sh
-set -exo nounset
+set -eo nounset
 
 test $# -ne 0
 
