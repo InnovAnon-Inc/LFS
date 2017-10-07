@@ -58,5 +58,4 @@ LFS_URL=www.linuxfromscratch.org/lfs/downloads/development
 NPROC=`getconf _NPROCESSORS_ONLN`
 export MAKEFLAGS=`expr $NPROC + 1`
 #export CFLAGS='-march=native -g0 -fmerge-all-constants -fipa-pta'
-export CFLAGS='-march=native -fmerge-all-constants -fipa-pta'
 
