@@ -24,6 +24,6 @@ umount -v -f $ROOTFSMNT || :
 
 # (swap)
 if [ ! -z ${SWAPDEV+x} ] ; then
-	swapoff -v -f $SWAPDEV || :
+	swapoff -v $SWAPDEV || :
 fi
 
