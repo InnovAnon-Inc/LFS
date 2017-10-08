@@ -14,7 +14,7 @@ NAME=sdc
 # Creating the LFS/tools Directory
 SKIP_LFS_4_2=YES
 # Adding the LFS User
-#SKIP_LFS_4_3=YES
+SKIP_LFS_4_3=YES
 
 
 
