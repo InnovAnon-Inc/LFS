@@ -154,14 +154,15 @@ fi
 
 # (swap)
 if [ ! -z ${SWAPDEV+x} ] ; then
-	echo -n $SWAPDEV | \
-	grep ! -q \\.img\$ || \
-	test -f $SWAPDEV || \
-	./mkimg.sh $SWAPDEV 1 1 G
-	echo -n $SWAPDEV | \
-	grep ! -q \\.img\$ || \
-	test -f $SWAPDEV || \
-	chmod -v 0600 $SWAPDEV
-	mkswap $SWAPDEV
+	# TODO
+	#echo -n $SWAPDEV | \
+	#grep ! -q \\.img\$ || \
+	#test -f $SWAPDEV || \
+	#./mkimg.sh $SWAPDEV 1 1 G
+	#echo -n $SWAPDEV | \
+	#grep ! -q \\.img\$ || \
+	#test -f $SWAPDEV || \
+	#chmod -v 0600 $SWAPDEV
+	#mkswap $SWAPDEV
 fi
 
