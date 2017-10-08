@@ -31,3 +31,6 @@ for k in \
 	. $K
 done
 
+SUF=`echo $* | \
+sed 's/ /-/g'`
+tar acpf $BKFS/tools-$SUF.txz /tools
