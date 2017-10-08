@@ -1,5 +1,7 @@
 SRCS=/storage_one/sources
+BKFS=/storage_one/lfs-bkfs
 TOOLSBKF=$SRCS/tools.txz
+IMGS=/storage_one/lfs-imgs
 
 NAME=sdc
 

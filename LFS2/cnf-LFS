@@ -1,4 +1,5 @@
 SRCS=/sources
+BKFS=/lfs-bkfs
 TOOLSBKF=$SRCS/tools.txz
 IMGS=/lfs-imgs
 

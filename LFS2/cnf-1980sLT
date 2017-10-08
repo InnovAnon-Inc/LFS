@@ -1,4 +1,5 @@
 SRCS=/mnt/home/sources
+BKFS=/mnt/home/lfs-bkfs
 TOOLSBKF=/mnt/home/tools.txz
 IMGS=/mnt/home/lfs-imgs
 

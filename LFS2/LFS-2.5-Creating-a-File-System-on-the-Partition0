@@ -17,10 +17,73 @@ if [ ! -z ${BOOTFSDEV+x} ] ; then
 	umount -v -f $BOOTFSMNT || :
 fi
 
+# /usr/local
+if [ ! -z ${USRLOCALFSDEV+x} ] ; then
+	umount -v -f $USRLOCALFSMNT || :
+fi
+
+# /usr/src
+if [ ! -z ${USRSRCFSDEV+x} ] ; then
+	umount -v -f $USRSRCFSMNT || :
+fi
+
+# /usr
+if [ ! -z ${USRFSDEV+x} ] ; then
+	umount -v -f $USRFSMNT || :
+fi
+
+# /var/cache
+if [ ! -z ${VARCACHEFSDEV+x} ] ; then
+	umount -v -f $VARCACHEFSMNT || :
+fi
+
+# /var/db
+if [ ! -z ${VARDBFSDEV+x} ] ; then
+	umount -v -f $VARDBFSMNT || :
+fi
+
+# /var/log
+if [ ! -z ${VARLOGFSDEV+x} ] ; then
+	umount -v -f $VARLOGFSMNT || :
+fi
+
+# /var/spool
+if [ ! -z ${VARSPOOLFSDEV+x} ] ; then
+	umount -v -f $VARSPOOLFSMNT || :
+fi
+
+# /var/tmp
+if [ ! -z ${VARTMPFSDEV+x} ] ; then
+	umount -v -f $VARTMPFSMNT || :
+fi
+
+# /var
+if [ ! -z ${VARFSDEV+x} ] ; then
+	umount -v -f $VARFSMNT || :
+fi
+
+# /home
+if [ ! -z ${HOMEFSDEV+x} ] ; then
+	umount -v -f $HOMEFSMNT || :
+fi
+
+# /opt
+if [ ! -z ${OPTFSDEV+x} ] ; then
+	umount -v -f $OPTFSMNT || :
+fi
+
+# /srv
+if [ ! -z ${SRVFSDEV+x} ] ; then
+	umount -v -f $SRVFSMNT || :
+fi
+
+# /tmp
+if [ ! -z ${TMPFSDEV+x} ] ; then
+	umount -v -f $TMPFSMNT || :
+fi
+
 # / /etc
 umount -v -f $ROOTFSMNT || :
-
-# TODO
 
 # (swap)
 if [ ! -z ${SWAPDEV+x} ] ; then
