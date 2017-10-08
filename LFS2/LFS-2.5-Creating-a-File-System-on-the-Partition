@@ -15,7 +15,7 @@ if [ ! -z ${EFIFSDEV+x} ] ; then
 	echo -n $EFIFSDEV | \
 	grep ! -q \\.img\$ || \
 	test -f $EFIFSDEV || \
-	./mkimg.sh $EFIFSDEV 1 1 G
+	./mkimg.sh $EFIFSDEV 10 1 G
 	mkfs -v -t vfat $EFIFSDEV
 fi
 
@@ -24,7 +24,7 @@ if [ ! -z ${BOOTFSDEV+x} ] ; then
 	echo -n $BOOTFSDEV | \
 	grep ! -q \\.img\$ || \
 	test -f $BOOTFSDEV || \
-	./mkimg.sh $BOOTFSDEV 1 1 G
+	./mkimg.sh $BOOTFSDEV 10 1 G
 	mkfs -v -t ext4 $BOOTFSDEV
 fi
 
@@ -32,7 +32,7 @@ fi
 echo -n $ROOTFSDEV | \
 grep ! -q \\.img\$ || \
 test -f $ROOTFSDEV || \
-./mkimg.sh $ROOTFSDEV 1 1 G
+./mkimg.sh $ROOTFSDEV 10 1 G
 mkfs -v -t ext4 $ROOTFSDEV
 
 # /usr
@@ -40,7 +40,7 @@ if [ ! -z ${USRFSDEV+x} ] ; then
 	echo -n $USRFSDEV | \
 	grep ! -q \\.img\$ || \
 	test -f $USRFSDEV || \
-	./mkimg.sh $USRFSDEV 1 1 G
+	./mkimg.sh $USRFSDEV 10 1 G
 	mkfs -v -t ext4 $USRFSDEV
 fi
 
@@ -49,7 +49,7 @@ if [ ! -z ${USRLOCALFSDEV+x} ] ; then
 	echo -n $USRLOCALFSDEV | \
 	grep ! -q \\.img\$ || \
 	test -f $USRLOCALFSDEV || \
-	./mkimg.sh $USRLOCALFSDEV 1 1 G
+	./mkimg.sh $USRLOCALFSDEV 10 1 G
 	mkfs -v -t ext4 $USRLOCALFSDEV
 fi
 
@@ -58,7 +58,7 @@ if [ ! -z ${USRSRCFSDEV+x} ] ; then
 	echo -n $USRSRCFSDEV | \
 	grep ! -q \\.img\$ || \
 	test -f $USRSRCFSDEV || \
-	./mkimg.sh $USRSRCFSDEV 1 1 G
+	./mkimg.sh $USRSRCFSDEV 10 1 G
 	mkfs -v -t ext4 $USRSRCFSDEV
 fi
 
@@ -67,7 +67,7 @@ if [ ! -z ${VARFSDEV+x} ] ; then
 	echo -n $VARFSDEV | \
 	grep ! -q \\.img\$ || \
 	test -f $VARFSDEV || \
-	./mkimg.sh $VARFSDEV 1 1 G
+	./mkimg.sh $VARFSDEV 10 1 G
 	mkfs -v -t ext4 $VARFSDEV
 fi
 
@@ -76,7 +76,7 @@ if [ ! -z ${VARCACHEFSDEV+x} ] ; then
 	echo -n $VARCACHEFSDEV | \
 	grep ! -q \\.img\$ || \
 	test -f $VARCACHEFSDEV || \
-	./mkimg.sh $VARCACHEFSDEV 1 1 G
+	./mkimg.sh $VARCACHEFSDEV 10 1 G
 	mkfs -v -t ext4 $VARCACHEFSDEV
 fi
 
@@ -85,7 +85,7 @@ if [ ! -z ${VARDBFSDEV+x} ] ; then
 	echo -n $VARDBFSDEV | \
 	grep ! -q \\.img\$ || \
 	test -f $VARDBFSDEV || \
-	./mkimg.sh $VARDBFSDEV 1 1 G
+	./mkimg.sh $VARDBFSDEV 10 1 G
 	mkfs -v -t ext4 $VARDBFSDEV
 fi
 
@@ -94,7 +94,7 @@ if [ ! -z ${VARLOGFSDEV+x} ] ; then
 	echo -n $VARLOGFSDEV | \
 	grep ! -q \\.img\$ || \
 	test -f $VARLOGFSDEV || \
-	./mkimg.sh $VARLOGFSDEV 1 1 G
+	./mkimg.sh $VARLOGFSDEV 10 1 G
 	mkfs -v -t ext4 $VARLOGFSDEV
 fi
 
@@ -103,7 +103,7 @@ if [ ! -z ${VARSPOOLFSDEV+x} ] ; then
 	echo -n $VARSPOOLFSDEV | \
 	grep ! -q \\.img\$ || \
 	test -f $VARSPOOLFSDEV || \
-	./mkimg.sh $VARSPOOLFSDEV 1 1 G
+	./mkimg.sh $VARSPOOLFSDEV 10 1 G
 	mkfs -v -t ext4 $VARSPOOLFSDEV
 fi
 
@@ -112,7 +112,7 @@ if [ ! -z ${VARTMPFSDEV+x} ] ; then
 	echo -n $VARTMPFSDEV | \
 	grep ! -q \\.img\$ || \
 	test -f $VARTMPFSDEV || \
-	./mkimg.sh $VARTMPFSDEV 1 1 G
+	./mkimg.sh $VARTMPFSDEV 10 1 G
 	mkfs -v -t ext4 $VARTMPFSDEV
 fi
 
@@ -121,7 +121,7 @@ if [ ! -z ${HOMEFSDEV+x} ] ; then
 	echo -n $HOMEFSDEV | \
 	grep ! -q \\.img\$ || \
 	test -f $HOMEFSDEV || \
-	./mkimg.sh $HOMEFSDEV 1 1 G
+	./mkimg.sh $HOMEFSDEV 10 1 G
 	mkfs -v -t ext4 $HOMEFSDEV
 fi
 
@@ -130,7 +130,7 @@ if [ ! -z ${OPTFSDEV+x} ] ; then
 	echo -n $OPTFSDEV | \
 	grep ! -q \\.img\$ || \
 	test -f $OPTFSDEV || \
-	./mkimg.sh $OPTFSDEV 1 1 G
+	./mkimg.sh $OPTFSDEV 10 1 G
 	mkfs -v -t ext4 $OPTFSDEV
 fi
 
@@ -139,7 +139,7 @@ if [ ! -z ${SRVFSDEV+x} ] ; then
 	echo -n $SRVFSDEV | \
 	grep ! -q \\.img\$ || \
 	test -f $SRVFSDEV || \
-	./mkimg.sh $SRVFSDEV 1 1 G
+	./mkimg.sh $SRVFSDEV 10 1 G
 	mkfs -v -t ext4 $SRVFSDEV
 fi
 
@@ -148,7 +148,7 @@ if [ ! -z ${TMPFSDEV+x} ] ; then
 	echo -n $TMPFSDEV | \
 	grep ! -q \\.img\$ || \
 	test -f $TMPFSDEV || \
-	./mkimg.sh $TMPFSDEV 1 1 G
+	./mkimg.sh $TMPFSDEV 10 1 G
 	mkfs -v -t ext4 $TMPFSDEV
 fi
 
@@ -159,7 +159,7 @@ if [ ! -z ${SWAPDEV+x} ] ; then
 	#echo -n $SWAPDEV | \
 	#grep ! -q \\.img\$ || \
 	#test -f $SWAPDEV || \
-	#./mkimg.sh $SWAPDEV 1 1 G
+	#./mkimg.sh $SWAPDEV 10 1 G
 	#echo -n $SWAPDEV | \
 	#grep ! -q \\.img\$ || \
 	#test -f $SWAPDEV || \
