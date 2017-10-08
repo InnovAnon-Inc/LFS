@@ -3,113 +3,8 @@ TOOLSBKF=/mnt/home/tools.txz
 IMGS=/mnt/home/lfs-imgs
 
 NAME=sdc
-export LFS=/mnt/lfs
 
-# /efi
-EFIFS=${NAME}1
-#EFIFSDEV=/dev/$EFIFS
-EFIFSDEV=$IMGS/$EFIFS.img
-EFIFSMNT=$LFS/efi
-EFIFSOPT='-o loop'
-
-# /boot
-BOOTFS=${NAME}3
-BOOTFSDEV=$IMGS/$BOOTFS.img
-BOOTFSMNT=$LFS/boot
-BOOTFSOPT='-o loop'
-
-# / /bin /etc /lib /root /sbin
-ROOTFS=${NAME}2
-#ROOTFSDEV=/dev/$ROOTFS
-ROOTFSDEV=$IMGS/$ROOTFS.img
-ROOTFSMNT=$LFS
-ROOTFSOPT='-o loop'
-
-# /usr
-USRFS=${NAME}4
-USRFSDEV=$IMGS/$USRFS.img
-USRFSMNT=$LFS/usr
-USRFSOPT='-o loop'
-
-# /usr/local
-USRLOCALFS=${NAME}5
-USRLOCALFSDEV=$IMGS/$USRLOCALFS.img
-USRLOCALFSMNT=$LFS/usr
-USRLOCALFSOPT='-o loop'
-
-# /usr/src
-USRSRCFS=${NAME}6
-USRSRCFSDEV=$IMGS/$USRSRCFS.img
-USRSRCFSMNT=$LFS/usr/src
-USRSRCFSOPT='-o loop'
-
-# /var
-VARFS=${NAME}7
-VARFSDEV=$IMGS/$VARFS.img
-VARFSMNT=$LFS/var
-VARFSOPT='-o loop'
-
-# /var/cache
-VARCACHEFS=${NAME}8
-VARCACHEFSDEV=$IMGS/$VARCACHEFS.img
-VARCACHEFSMNT=$LFS/var/cache
-VARCACHEFSOPT='-o loop'
-
-# /var/db
-VARDBFS=${NAME}9
-VARDBFSDEV=$IMGS/$VARDBFS.img
-VARDBFSMNT=$LFS/var/db
-VARDBFSOPT='-o loop'
-
-# /var/log
-VARLOGFS=${NAME}10
-VARLOGFSDEV=$IMGS/$VARLOGFS.img
-VARLOGFSMNT=$LFS/var/log
-VARLOGFSOPT='-o loop'
-
-# /var/spool
-VARSPOOLFS=${NAME}11
-VARSPOOLFSDEV=$IMGS/$VARSPOOLFS.img
-VARSPOOLFSMNT=$LFS/var/spool
-VARSPOOLFSOPT='-o loop'
-
-# /var/tmp
-VARTMPFS=${NAME}12
-VARTMPFSDEV=$IMGS/$VARTMPFS.img
-VARTMPFSMNT=$LFS/var/tmp
-VARTMPFSOPT='-o loop'
-
-# /home
-HOMEFS=${NAME}13
-HOMEFSDEV=$IMGS/$HOMEFS.img
-HOMEFSMNT=$LFS/home
-HOMEFSOPT='-o loop'
-
-# /opt
-OPTFS=${NAME}14
-OPTFSDEV=$IMGS/$OPTFS.img
-OPTFSMNT=$LFS/opt
-OPTFSOPT='-o loop'
-
-# /srv
-SRVFS=${NAME}15
-SRVFSDEV=$IMGS/$SRVFS.img
-SRVFSMNT=$LFS/srv
-SRVFSOPT='-o loop'
-
-# /tmp
-TMPFS=${NAME}16
-TMPFSDEV=$IMGS/$TMPFS.img
-TMPFSMNT=$LFS/tmp
-TMPFSOPT='-o loop'
-
-# (swap)
-SWAP=${NAME}17
-#SWAPDEV=/dev/$SWAP
-SWAPDEV=$IMGS/$SWAP.img
-SWAPOPT='-o loop'
-
-SKIP_TESTS=YES
+. ./cnf-common
 
 # Creating a File System on the Partition
 SKIP_LFS_2_5=YES
@@ -119,12 +14,4 @@ SKIP_LFS_2_5=YES
 #SKIP_LFS_4_2=YES
 # Adding the LFS User
 SKIP_LFS_4_3=YES
-
-LFS_URL=www.linuxfromscratch.org/lfs/downloads/development
-#LFS_URL=www.linuxfromscratch.org/lfs/downloads/stable
-
-# LFS 4.5 About SBUs
-NPROC=`getconf _NPROCESSORS_ONLN`
-export MAKEFLAGS=`expr $NPROC + 1`
-#export CFLAGS='-march=native -g0 -fmerge-all-constants -fipa-pta'
 
