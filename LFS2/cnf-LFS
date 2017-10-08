@@ -6,11 +6,11 @@ NAME=sdc
 export LFS=/mnt/lfs
 
 # /efi
-EFIFS=${NAME}1
-#EFIFSDEV=/dev/$EFIFS
-EFIFSDEV=$IMGS/$EFIFS.img
-EFIFSMNT=$LFS/efi
-EFIFSOPT='-o loop'
+#EFIFS=${NAME}1
+##EFIFSDEV=/dev/$EFIFS
+#EFIFSDEV=$IMGS/$EFIFS.img
+#EFIFSMNT=$LFS/efi
+#EFIFSOPT='-o loop'
 
 # /boot
 BOOTFS=${NAME}3
