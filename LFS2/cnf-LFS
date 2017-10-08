@@ -10,12 +10,14 @@ export LFS=/mnt/lfs
 ##EFIFSDEV=/dev/$EFIFS
 #EFIFSDEV=$IMGS/$EFIFS.img
 #EFIFSMNT=$LFS/efi
+#EFIFSOPT=
 #EFIFSOPT='-o loop'
 
 # /boot
 #BOOTFS=${NAME}3
 #BOOTFSDEV=$IMGS/$BOOTFS.img
 #BOOTFSMNT=$LFS/boot
+#BOOTFSOPT=
 #BOOTFSOPT='-o loop'
 
 # / /bin /etc /lib /root /sbin
@@ -23,6 +25,7 @@ ROOTFS=${NAME}2
 ROOTFSDEV=/dev/$ROOTFS
 #ROOTFSDEV=$IMGS/$ROOTFS.img
 ROOTFSMNT=$LFS
+ROOTFSOPT=
 #ROOTFSOPT='-o loop'
 
 # /usr
