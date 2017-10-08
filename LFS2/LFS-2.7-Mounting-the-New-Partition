@@ -7,30 +7,119 @@ cd $D
 
 . ./cnf
 
-# / /etc
+# / /bin /etc /lib /root /sbin
 mkdir -pv $ROOTFSMNT
 test ! -z ${SKIP_LFS_2_7+x} || \
-mount -v -t ext4 $ROOTFSDEV $ROOTFSMNT
+mount -v -t ext4 $ROOTFSOPT $ROOTFSDEV $ROOTFSMNT
 
 # /boot
 if [ ! -z ${BOOTFSDEV+x} ] ; then
 	mkdir -pv $BOOTFSMNT
 	test ! -z ${SKIP_LFS_2_7+x} || \
-	mount -v -t ext4 $BOOTFSDEV $BOOTFSMNT
+	mount -v -t ext4 $BOOTFSOPT $BOOTFSDEV $BOOTFSMNT
 fi
 
 # /efi
 if [ ! -z ${EFIFSDEV+x} ] ; then
 	mkdir -pv $EFIFSMNT
 	test ! -z ${SKIP_LFS_2_7+x} || \
-	mount -v -t vfat $EFIFSDEV $EFIFSMNT
+	mount -v -t vfat $EFIFSOPT $EFIFSDEV $EFIFSMNT
 fi
 
-# TODO
+# /usr
+if [ ! -z ${USRFSDEV+x} ] ; then
+	mkdir -pv $USRFSMNT
+	test ! -z ${SKIP_LFS_2_7+x} || \
+	mount -v -t ext4 $USRFSOPT $USRFSDEV $USRFSMNT
+fi
+
+# /usr/local
+if [ ! -z ${USRLOCALFSDEV+x} ] ; then
+	mkdir -pv $USRLOCALFSMNT
+	test ! -z ${SKIP_LFS_2_7+x} || \
+	mount -v -t ext4 $USRLOCALFSOPT $USRLOCALFSDEV $USRLOCALFSMNT
+fi
+
+# /usr/src
+if [ ! -z ${USRSRCFSDEV+x} ] ; then
+	mkdir -pv $USRSRCFSMNT
+	test ! -z ${SKIP_LFS_2_7+x} || \
+	mount -v -t ext4 $USRSRCFSOPT $USRSRCFSDEV $USRSRCFSMNT
+fi
+
+# /var
+if [ ! -z ${VARFSDEV+x} ] ; then
+	mkdir -pv $VARFSMNT
+	test ! -z ${SKIP_LFS_2_7+x} || \
+	mount -v -t ext4 $VARFSOPT $VARFSDEV $VARFSMNT
+fi
+
+# /var/cache
+if [ ! -z ${VARCACHEFSDEV+x} ] ; then
+	mkdir -pv $VARCACHEFSMNT
+	test ! -z ${SKIP_LFS_2_7+x} || \
+	mount -v -t ext4 $VARCACHEFSOPT $VARCACHEFSDEV $VARCACHEFSMNT
+fi
+
+# /var/db
+if [ ! -z ${VARDBFSDEV+x} ] ; then
+	mkdir -pv $VARDBFSMNT
+	test ! -z ${SKIP_LFS_2_7+x} || \
+	mount -v -t ext4 $VARDBFSOPT $VARDBFSDEV $VARDBFSMNT
+fi
+
+# /var/log
+if [ ! -z ${VARLOGFSDEV+x} ] ; then
+	mkdir -pv $VARLOGFSMNT
+	test ! -z ${SKIP_LFS_2_7+x} || \
+	mount -v -t ext4 $VARLOGFSOPT $VARLOGFSDEV $VARLOGFSMNT
+fi
+
+# /var/spool
+if [ ! -z ${VARSPOOLFSDEV+x} ] ; then
+	mkdir -pv $VARSPOOLFSMNT
+	test ! -z ${SKIP_LFS_2_7+x} || \
+	mount -v -t ext4 $VARSPOOLFSOPT $VARSPOOLFSDEV $VARSPOOLFSMNT
+fi
+
+# /var/tmp
+if [ ! -z ${VARTMPFSDEV+x} ] ; then
+	mkdir -pv $VARTMPFSMNT
+	test ! -z ${SKIP_LFS_2_7+x} || \
+	mount -v -t ext4 $VARTMPFSOPT $VARTMPFSDEV $VARTMPFSMNT
+fi
+
+# /home
+if [ ! -z ${HOMEFSDEV+x} ] ; then
+	mkdir -pv $HOMEFSMNT
+	test ! -z ${SKIP_LFS_2_7+x} || \
+	mount -v -t ext4 $HOMEFSOPT $HOMEFSDEV $HOMEFSMNT
+fi
+
+# /opt
+if [ ! -z ${OPTFSDEV+x} ] ; then
+	mkdir -pv $OPTFSMNT
+	test ! -z ${SKIP_LFS_2_7+x} || \
+	mount -v -t ext4 $OPTFSOPT $OPTFSDEV $OPTFSMNT
+fi
+
+# /srv
+if [ ! -z ${SRVFSDEV+x} ] ; then
+	mkdir -pv $SRVFSMNT
+	test ! -z ${SKIP_LFS_2_7+x} || \
+	mount -v -t ext4 $SRVFSOPT $SRVFSDEV $SRVFSMNT
+fi
+
+# /tmp
+if [ ! -z ${TMPFSDEV+x} ] ; then
+	mkdir -pv $TMPFSMNT
+	test ! -z ${SKIP_LFS_2_7+x} || \
+	mount -v -t ext4 $TMPFSOPT $TMPFSDEV $TMPFSMNT
+fi
 
 # (swap)
 if [ ! -z ${SWAPDEV+x} ] ; then
 	test ! -z ${SKIP_LFS_2_7+x} || \
-	swapon -v $SWAPDEV
+	swapon -v $SWAPOPT $SWAPDEV
 fi
 

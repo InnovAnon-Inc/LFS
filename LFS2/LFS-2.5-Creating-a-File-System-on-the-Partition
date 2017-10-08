@@ -12,21 +12,152 @@ if [ ! -z ${SKIP_LFS_2_5+x} ] ; then exit 0 ; fi
 
 # /efi
 if [ ! -z ${EFIFSDEV+x} ] ; then
+	echo $EFIFSDEV | \
+	grep ! -q \\.img\$ || \
+	test -f $EFIFSDEV || \
+	./mkimg.sh $EFIFSDEV 1 1 G
 	mkfs -v -t vfat $EFIFSDEV
 fi
 
 # /boot
 if [ ! -z ${BOOTFSDEV+x} ] ; then
+	echo $BOOTFSDEV | \
+	grep ! -q \\.img\$ || \
+	test -f $BOOTFSDEV || \
+	./mkimg.sh $BOOTFSDEV 1 1 G
 	mkfs -v -t ext4 $BOOTFSDEV
 fi
 
-# / /etc
+# / /bin /etc /lib /root /sbin
+echo $ROOTFSDEV | \
+grep ! -q \\.img\$ || \
+test -f $ROOTFSDEV || \
+./mkimg.sh $ROOTFSDEV 1 1 G
 mkfs -v -t ext4 $ROOTFSDEV
 
-# TODO
+# /usr
+if [ ! -z ${USRFSDEV+x} ] ; then
+	echo $USRFSDEV | \
+	grep ! -q \\.img\$ || \
+	test -f $USRFSDEV || \
+	./mkimg.sh $USRFSFSDEV 1 1 G
+	mkfs -v -t ext4 $USRFSDEV
+fi
+
+# /usr/local
+if [ ! -z ${USRLOCALFSDEV+x} ] ; then
+	echo $USRLOCALFSDEV | \
+	grep ! -q \\.img\$ || \
+	test -f $USRLOCALFSDEV || \
+	./mkimg.sh $USRLOCALFSDEV 1 1 G
+	mkfs -v -t ext4 $USRLOCALFSDEV
+fi
+
+# /usr/src
+if [ ! -z ${USRSRCFSDEV+x} ] ; then
+	echo $USRSRCFSDEV | \
+	grep ! -q \\.img\$ || \
+	test -f $USRSRCFSDEV || \
+	./mkimg.sh $USRSRCFSDEV 1 1 G
+	mkfs -v -t ext4 $USRSRCFSDEV
+fi
+
+# /var
+if [ ! -z ${VARFSDEV+x} ] ; then
+	echo $VARFSDEV | \
+	grep ! -q \\.img\$ || \
+	test -f $VARFSDEV || \
+	./mkimg.sh $VARFSDEV 1 1 G
+	mkfs -v -t ext4 $VARFSDEV
+fi
+
+# /var/cache
+if [ ! -z ${VARCACHEFSDEV+x} ] ; then
+	echo $VARCACHEFSDEV | \
+	grep ! -q \\.img\$ || \
+	test -f $VARCACHEFSDEV || \
+	./mkimg.sh $VARCACHEFSDEV 1 1 G
+	mkfs -v -t ext4 $VARCACHEFSDEV
+fi
+
+# /var/db
+if [ ! -z ${VARDBFSDEV+x} ] ; then
+	echo $VARDBFSDEV | \
+	grep ! -q \\.img\$ || \
+	test -f $VARDBFSDEV || \
+	./mkimg.sh $VARDBFSDEV 1 1 G
+	mkfs -v -t ext4 $VARDBFSDEV
+fi
+
+# /var/log
+if [ ! -z ${VARLOGFSDEV+x} ] ; then
+	echo $VARLOGFSDEV | \
+	grep ! -q \\.img\$ || \
+	test -f $VARLOGFSDEV || \
+	./mkimg.sh $VARLOGFSDEV 1 1 G
+	mkfs -v -t ext4 $VARLOGFSDEV
+fi
+
+# /var/spool
+if [ ! -z ${VARSPOOLFSDEV+x} ] ; then
+	echo $VARSPOOLFSDEV | \
+	grep ! -q \\.img\$ || \
+	test -f $VARSPOOLFSDEV || \
+	./mkimg.sh $VARSPOOLFSDEV 1 1 G
+	mkfs -v -t ext4 $VARSPOOLFSDEV
+fi
+
+# /var/tmp
+if [ ! -z ${VARTMPFSDEV+x} ] ; then
+	echo $VARTMPFSDEV | \
+	grep ! -q \\.img\$ || \
+	test -f $VARTMPFSDEV || \
+	./mkimg.sh $VARTMPFSDEV 1 1 G
+	mkfs -v -t ext4 $VARTMPFSDEV
+fi
+
+# /home
+if [ ! -z ${HOMEFSDEV+x} ] ; then
+	echo $HOMEFSDEV | \
+	grep ! -q \\.img\$ || \
+	test -f $HOMEFSDEV || \
+	./mkimg.sh $HOMEFSDEV 1 1 G
+	mkfs -v -t ext4 $HOMEFSDEV
+fi
+
+# /opt
+if [ ! -z ${OPTFSDEV+x} ] ; then
+	echo $OPTFSDEV | \
+	grep ! -q \\.img\$ || \
+	test -f $OPTFSDEV || \
+	./mkimg.sh $OPTFSDEV 1 1 G
+	mkfs -v -t ext4 $OPTFSDEV
+fi
+
+# /srv
+if [ ! -z ${SRVFSDEV+x} ] ; then
+	echo $SRVFSDEV | \
+	grep ! -q \\.img\$ || \
+	test -f $SRVFSDEV || \
+	./mkimg.sh $SRVFSDEV 1 1 G
+	mkfs -v -t ext4 $SRVFSDEV
+fi
+
+# /tmp
+if [ ! -z ${TMPFSDEV+x} ] ; then
+	echo $TMPFSDEV | \
+	grep ! -q \\.img\$ || \
+	test -f $TMPFSDEV || \
+	./mkimg.sh $TMPFSDEV 1 1 G
+	mkfs -v -t ext4 $TMPFSDEV
+fi
 
 # (swap)
 if [ ! -z ${SWAPDEV+x} ] ; then
+	echo $SWAPDEV | \
+	grep ! -q \\.img\$ || \
+	test -f $SWAPDEV || \
+	./mkimg.sh $SWAPDEV 1 1 G
 	mkswap $SWAPDEV
 fi
 
