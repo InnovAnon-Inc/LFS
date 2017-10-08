@@ -106,7 +106,7 @@ TMPFSOPT='-o loop'
 # (swap)
 SWAP=${NAME}17
 #SWAPDEV=/dev/$SWAP
-SWAPDEV=$IMGS/SWAP.img
+SWAPDEV=$IMGS/$SWAP.img
 SWAPOPT='-o loop'
 
 SKIP_TESTS=YES
