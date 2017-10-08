@@ -13,13 +13,13 @@ cd $SRCS
 
 for k in wget-list md5sums ; do
 	test -f $k || \
-	wget $LFS_URL/$k
+	wget --no-check-certificate $LFS_URL/$k
 done
 
 cat wget-list | \
 while read k ; do
 	test -f `basename $k` || \
-	wget $k || :
+	wget --no-check-certificate $k || :
 done
 
 set +e
