@@ -154,6 +154,7 @@ fi
 
 # (swap)
 if [ ! -z ${SWAPDEV+x} ] ; then
+	echo TODO
 	# TODO
 	#echo -n $SWAPDEV | \
 	#grep ! -q \\.img\$ || \
