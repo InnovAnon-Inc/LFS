@@ -40,7 +40,7 @@ if [ ! -z ${USRFSDEV+x} ] ; then
 	echo -n $USRFSDEV | \
 	grep ! -q \\.img\$ || \
 	test -f $USRFSDEV || \
-	./mkimg.sh $USRFSFSDEV 1 1 G
+	./mkimg.sh $USRFSDEV 1 1 G
 	mkfs -v -t ext4 $USRFSDEV
 fi
 
