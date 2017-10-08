@@ -15,8 +15,8 @@ shift
 #su -c "$*" - lfs
 #su - lfs -c "$A $*" -- "$*"
 su - lfs << EOF
-source \~/.bashrc
-#source $HOME/.bashrc
+#source \~/.bashrc
+source \$HOME/.bashrc
 $A $*
 EOF
 
