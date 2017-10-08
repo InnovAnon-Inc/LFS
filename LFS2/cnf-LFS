@@ -16,3 +16,24 @@ NAME=sdc
 # Adding the LFS User
 SKIP_LFS_4_3=YES
 
+
+
+
+
+
+
+
+
+# / /bin /etc /lib /root /sbin
+ROOTFS=${NAME}2
+#ROOTFSDEV=/dev/$ROOTFS
+ROOTFSDEV=$IMGS/$ROOTFS.img
+ROOTFSMNT=$LFS
+#ROOTFSOPT=
+ROOTFSOPT='-o loop'
+
+# (swap)
+SWAP=${NAME}17
+#SWAPDEV=/dev/$SWAP
+SWAPDEV=$IMGS/$SWAP.img
+SWAPOPT='-o loop'
