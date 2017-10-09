@@ -7,7 +7,7 @@ tar xf tcl-core8.6.7-src.tar.gz
 pushd  tcl8.6.7
 
 cd unix
-./configure --prefix=/tool
+./configure --prefix=/tools
 
 make
 
