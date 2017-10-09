@@ -1,6 +1,6 @@
 set -eo nounset
 
-cd /sources
+cd /mnt/lfs/sources
 
 rm -rf m4-1.4.18
 tar xf m4-1.4.18.tar.xz

@@ -1,6 +1,6 @@
 set -eo nounset
 
-cd /sources
+cd /mnt/lfs/sources
 
 rm -rf ncurses-6.0
 tar xf ncurses-6.0.tar.gz

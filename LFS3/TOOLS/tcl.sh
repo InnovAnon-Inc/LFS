@@ -1,6 +1,6 @@
 set -eo nounset
 
-cd /sources
+cd /mnt/lfs/sources
 
 rm -rf tcl8.6.7
 tar xf tcl-core8.6.7-src.tar.gz

@@ -1,6 +1,6 @@
 set -eo nounset
 
-cd /sources
+cd /mnt/lfs/sources
 
 rm -rf linux-4.13.3
 tar xf linux-4.13.3.tar.xz

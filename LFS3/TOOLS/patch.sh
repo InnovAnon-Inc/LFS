@@ -1,6 +1,6 @@
 set -eo nounset
 
-cd /sources
+cd /mnt/lfs/sources
 
 rm -rf patch-2.7.5
 tar xf patch-2.7.5.tar.xz

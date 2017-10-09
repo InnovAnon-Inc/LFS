@@ -1,6 +1,6 @@
 set -eo nounset
 
-cd /sources
+cd /mnt/lfs/sources
 
 rm -rf diffutils-3.6
 tar xf diffutils-3.6.tar.xz

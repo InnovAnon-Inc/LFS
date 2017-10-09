@@ -1,6 +1,6 @@
 set -eo nounset
 
-cd /sources
+cd /mnt/lfs/sources
 
 rm -rf make-4.2.1
 tar xf make-4.2.1.tar.bz2

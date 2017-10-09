@@ -1,6 +1,6 @@
 set -eo nounset
 
-cd /sources
+cd /mnt/lfs/sources
 
 rm -rf gawk-4.1.4
 tar xf gawk-4.1.4.tar.xz

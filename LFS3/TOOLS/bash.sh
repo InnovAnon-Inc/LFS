@@ -1,6 +1,6 @@
 set -eo nounset
 
-cd /sources
+cd /mnt/lfs/sources
 
 rm -rf bash-4.4
 tar xf bash-4.4.tar.gz

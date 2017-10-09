@@ -1,6 +1,6 @@
 set -eo nounset
 
-cd /sources
+cd /mnt/lfs/sources
 
 rm -rf findutils-4.6.0
 tar xf findutils-4.6.0.tar.gz

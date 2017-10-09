@@ -1,6 +1,6 @@
 set -eo nounset
 
-cd /sources
+cd /mnt/lfs/sources
 
 rm -rf binutils-2.29
 tar xf binutils-2.29.tar.bz2

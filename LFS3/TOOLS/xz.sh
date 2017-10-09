@@ -1,6 +1,6 @@
 set -eo nounset
 
-cd /sources
+cd /mnt/lfs/sources
 
 rm -rf xz-5.2.3
 tar xf xz-5.2.3.tar.xz

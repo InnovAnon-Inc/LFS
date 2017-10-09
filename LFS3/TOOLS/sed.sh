@@ -1,6 +1,6 @@
 set -eo nounset
 
-cd /sources
+cd /mnt/lfs/sources
 
 rm -rf sed-4.4
 tar xf sed-4.4.tar.xz

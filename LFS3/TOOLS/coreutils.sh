@@ -1,6 +1,6 @@
 set -eo nounset
 
-cd /sources
+cd /mnt/lfs/sources
 
 rm -rf coreutils-8.28
 tar xf coreutils-8.28.tar.xz

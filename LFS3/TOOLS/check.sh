@@ -1,6 +1,6 @@
 set -eo nounset
 
-cd /sources
+cd /mnt/lfs/sources
 
 rm -rf check-0.11.0
 tar xf check-0.11.0.tar.gz

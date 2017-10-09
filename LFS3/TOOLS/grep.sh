@@ -1,6 +1,6 @@
 set -eo nounset
 
-cd /sources
+cd /mnt/lfs/sources
 
 rm -rf grep-3.1
 tar xf grep-3.1.tar.xz

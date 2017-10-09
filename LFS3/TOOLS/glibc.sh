@@ -1,6 +1,6 @@
 set -eo nounset
 
-cd /sources
+cd /mnt/lfs/sources
 
 rm -rf glibc-2.26
 tar xf glibc-2.26.tar.xz

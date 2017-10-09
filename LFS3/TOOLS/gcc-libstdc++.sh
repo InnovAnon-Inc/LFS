@@ -1,6 +1,6 @@
 set -eo nounset
 
-cd /sources
+cd /mnt/lfs/sources
 
 rm -rf gcc-7.2.0
 tar xf gcc-7.2.0.tar.xz

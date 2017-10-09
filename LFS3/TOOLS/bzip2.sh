@@ -1,6 +1,6 @@
 set -eo nounset
 
-cd /sources
+cd /mnt/lfs/sources
 
 rm -rf bzip2-1.0.6
 tar xf bzip2-1.0.6.tar.gz

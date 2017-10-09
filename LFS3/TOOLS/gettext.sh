@@ -1,6 +1,6 @@
 set -eo nounset
 
-cd /sources
+cd /mnt/lfs/sources
 
 rm -rf gettext-0.19.8.1
 tar xf gettext-0.19.8.1.tar.xz

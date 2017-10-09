@@ -1,6 +1,6 @@
 set -eo nounset
 
-cd /sources
+cd /mnt/lfs/sources
 
 rm -rf util-linux-2.30.2
 tar xf util-linux-2.30.2.tar.xz

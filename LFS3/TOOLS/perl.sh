@@ -1,6 +1,6 @@
 set -eo nounset
 
-cd /sources
+cd /mnt/lfs/sources
 
 rm -rf perl-5.26.1
 tar xf perl-5.26.1.tar.xz
