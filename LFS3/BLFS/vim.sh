@@ -6,9 +6,9 @@ test -f vim-8.0.586.tar.bz2 || \
 wget --no-check-certificate \
 	http://ftp.vim.org/vim/unix/vim-8.0.586.tar.bz2
 
-rm -rf vim8.0.586
+rm -rf vim80
 tar xf vim-8.0.586.tar.bz2
-pushd  vim8.0.586
+pushd  vim80
 
 echo '#define SYS_VIMRC_FILE  "/etc/vimrc"' >>  src/feature.h &&
 echo '#define SYS_GVIMRC_FILE "/etc/gvimrc"' >> src/feature.h &&
@@ -48,4 +48,4 @@ EOF
 #:help version-8.0.586
 
 popd
-rm -rf vim8.0.586
+rm -rf vim80
