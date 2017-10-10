@@ -2,6 +2,7 @@ set -eo nounset
 
 cd /sources
 
+test -f pcre-8.41.tar.bz2 || \
 wget --no-check-certificate \
 	http://downloads.sourceforge.net/pcre/pcre-8.41.tar.bz2
 

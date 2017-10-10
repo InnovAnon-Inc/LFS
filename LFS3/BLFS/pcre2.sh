@@ -2,12 +2,13 @@ set -eo nounset
 
 cd /sources
 
+test -f pcre2-10.30.tar.bz2 || \
 wget --no-check-certificate \
 	http://downloads.sourceforge.net/pcre/pcre2-10.30.tar.bz2
 
 rm -rf pcre2-10.30
 tar xf pcre2-10.30.tar.bz2
-pushd pcre2-10.30
+pushd  pcre2-10.30
 
 ./configure --prefix=/usr                       \
             --docdir=/usr/share/doc/pcre2-10.30 \

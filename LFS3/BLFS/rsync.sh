@@ -22,5 +22,24 @@ make install
 install -v -m755 -d          /usr/share/doc/rsync-3.1.2/api &&
 install -v -m644 dox/html/*  /usr/share/doc/rsync-3.1.2/api
 
+cat > /etc/rsyncd.conf << "EOF"
+# This is a basic rsync configuration file
+# It exports a single module without user authentication.
+
+motd file = /home/rsync/welcome.msg
+use chroot = yes
+
+[localhost]
+    path = /home/rsync
+    comment = Default rsync module
+    read only = yes
+    list = yes
+    uid = rsyncd
+    gid = rsyncd
+
+EOF
+
+make install-rsyncd
+
 popd
 rm -rf rsync-3.1.2
