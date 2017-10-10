@@ -3,7 +3,7 @@ set -eo nounset
 cd /mnt/lfs/sources
 
 rm -rf gzip-1.8
-tar xf gzip-1.8.tar.gz
+tar xf gzip-1.8.tar.xz
 pushd  gzip-1.8
 
 ./configure --prefix=/tools
