@@ -1,4 +1,4 @@
-set -eo nounset
+#set -eo nounset
 
 ln -sv /tools/bin/{bash,cat,dd,echo,ln,pwd,rm,stty} /bin
 ln -sv /tools/bin/{install,perl} /usr/bin

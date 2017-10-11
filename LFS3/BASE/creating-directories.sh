@@ -1,4 +1,4 @@
-set -eo nounset
+#set -eo nounset
 
 mkdir -pv /{bin,boot,etc/{opt,sysconfig},home,lib/firmware,mnt,opt}
 mkdir -pv /{media/{floppy,cdrom},sbin,srv,var}

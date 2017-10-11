@@ -3,7 +3,7 @@ set -eo nounset
 cd /sources
 
 rm -rf zlib-1.2.11
-tar xv zlib-1.2.11.tar.xz
+tar xf zlib-1.2.11.tar.xz
 pushd  zlib-1.2.11
 
 ./configure --prefix=/usr
