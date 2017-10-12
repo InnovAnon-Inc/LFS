@@ -2,9 +2,9 @@ set -eo nounset
 
 cd /sources
 
-rm -rf vim-8.0.586
+rm -rf vim80
 tar xf vim-8.0.586.tar.bz2
-pushd  vim-8.0.586
+pushd  vim80
 
 echo '#define SYS_VIMRC_FILE "/etc/vimrc"' >> src/feature.h
 
@@ -48,4 +48,4 @@ touch ~/.vimrc
 #set spell
 
 popd
-rm -rf vim-8.0.586
+rm -rf vim80
