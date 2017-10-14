@@ -1,5 +1,7 @@
 set -eo nounset
 
+cd /sources
+
 test -f alsa-tools-1.1.3.tar.bz2 || \
 wget --no-check-certificate \
 	ftp://ftp.alsa-project.org/pub/tools/alsa-tools-1.1.3.tar.bz2

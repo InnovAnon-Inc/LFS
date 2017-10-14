@@ -2,6 +2,8 @@ set -eo nounset
 
 test $# -eq 1
 
+cd /sources
+
 test -f blfs-bootscripts-20170731.tar.xz || \
 wget --no-check-certificate \
 	 http://anduin.linuxfromscratch.org/BLFS/blfs-bootscripts/blfs-bootscripts-20170731.tar.xz
