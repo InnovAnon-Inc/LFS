@@ -12,9 +12,9 @@ wget --no-check-certificate \
 	$k
 done
 
-rm -rf llvm-5.0.0
+rm -rf llvm-5.0.0.src
 tar xf llvm-5.0.0.src.tar.xz
-pushd  llvm-5.0.0
+pushd  llvm-5.0.0.src
 
 tar -xf ../cfe-5.0.0.src.tar.xz -C tools
 tar -xf ../compiler-rt-5.0.0.src.tar.xz -C projects
@@ -52,4 +52,4 @@ install -v -d -m755 /usr/share/doc/llvm-5.0.0/clang-html
 cp -Rv tools/clang/docs/html/* /usr/share/doc/llvm-5.0.0/clang-html
 
 popd
-rm -rf llvm-5.0.0
+rm -rf llvm-5.0.0.src
