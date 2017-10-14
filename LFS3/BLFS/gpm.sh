@@ -34,7 +34,8 @@ install -v -m644    doc/support/*                     \
 install -v -m644    doc/{FAQ,HACK_GPM,README*}        \
                     /usr/share/doc/gpm-1.20.7
 
-make install-gpm
+#make install-gpm
+/workspace/LFS/LFS3/BLFS/bootscripts.sh gpm
 
 echo TODO
 exit 2

@@ -86,9 +86,11 @@ groupadd -g 99 nogroup || :
 useradd -c "Unprivileged Nobody" -d /dev/null -g nogroup \
     -s /bin/false -u 99 nobody || :
 
-make install-samba
+#make install-samba
+/workspace/LFS/LFS3/BLFS/bootscripts.sh samba
 
-make install-winbindd
+#make install-winbindd
+/workspace/LFS/LFS3/BLFS/bootscripts.sh winbindd
 
 popd
 rm -rf samba-4.7.0

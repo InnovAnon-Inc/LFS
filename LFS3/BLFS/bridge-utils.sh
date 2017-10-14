@@ -16,7 +16,8 @@ make
 
 make install
 
-make install-service-bridge
+#make install-service-bridge
+/workspace/LFS/LFS3/BLFS/bootscripts.sh service-bridge
 
 cat > /etc/sysconfig/ifconfig.br0 << "EOF"
 ONBOOT=yes

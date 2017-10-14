@@ -47,7 +47,8 @@ echo "PermitRootLogin no" >> /etc/ssh/sshd_config
 echo "PasswordAuthentication no" >> /etc/ssh/sshd_config
 echo "ChallengeResponseAuthentication no" >> /etc/ssh/sshd_config
 
-make install-sshd
+#make install-sshd
+/workspace/LFS/LFS3/BLFS/bootscripts.sh sshd
 
 popd
 rm -rf openssh-7.5p1

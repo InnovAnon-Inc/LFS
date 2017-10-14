@@ -17,7 +17,8 @@ make install
 mkdir -pv    /usr/share/doc/haveged-1.9.1
 cp -v README /usr/share/doc/haveged-1.9.1
 
-make install-haveged
+#make install-haveged
+/workspace/LFS/LFS3/BLFS/bootscripts.sh haveged
 
 popd
 rm -rf haveged-1.9.1

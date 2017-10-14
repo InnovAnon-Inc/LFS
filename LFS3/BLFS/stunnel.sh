@@ -56,7 +56,8 @@ cert   = /etc/stunnel/stunnel.pem
 
 EOF
 
-make install-stunnel
+#make install-stunnel
+/workspace/LFS/LFS3/BLFS/bootscripts.sh stunnel
 
 popd
 rm -rf stunnel-5.42

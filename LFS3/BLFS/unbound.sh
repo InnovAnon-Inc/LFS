@@ -10,9 +10,9 @@ rm -rf unbound-1.6.6
 tar xf unbound-1.6.6.tar.gz
 pushd unbound-1.6.6
 
-groupadd -g 88 unbound
+groupadd -g 88 unbound || :
 useradd -c "Unbound DNS resolver" -d /var/lib/unbound -u 88 \
-        -g unbound -s /bin/false unbound
+        -g unbound -s /bin/false unbound || :
 
 ./configure --prefix=/usr     \
             --sysconfdir=/etc \
@@ -33,9 +33,10 @@ echo "nameserver 127.0.0.1" > /etc/resolv.conf
 sed -i '/request /i\supersede domain-name-servers 127.0.0.1;' \
        /etc/dhcp/dhclient.conf
 
-unbound-achor
+unbound-anchor
 
-make install-unbound
+#make install-unbound
+/workspace/LFS/LFS3/BLFS/bootscripts.sh unbound
 
 popd
 rm -rf unbound-1.6.6

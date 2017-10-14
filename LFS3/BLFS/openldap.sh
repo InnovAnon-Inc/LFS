@@ -78,7 +78,8 @@ install -v -dm755 /usr/share/doc/openldap-2.4.45
 cp      -vfr      doc/{drafts,rfc,guide} \
                   /usr/share/doc/openldap-2.4.45
 
-make install-slapd
+#make install-slapd
+/workspace/LFS/LFS3/BLFS/bootscripts.sh slapd
 
 /etc/rc.d/init.d/slapd start
 

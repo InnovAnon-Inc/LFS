@@ -39,7 +39,8 @@ use chroot = yes
 
 EOF
 
-make install-rsyncd
+#make install-rsyncd
+/workspace/LFS/LFS3/BLFS/bootscripts.sh rsyncd
 
 popd
 rm -rf rsync-3.1.2

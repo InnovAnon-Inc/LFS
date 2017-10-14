@@ -49,7 +49,8 @@ echo "select * from t1;" | (su - postgres -c '/usr/bin/psql test')
 
 su - postgres -c "/usr/bin/pg_ctl stop -D /srv/pgsql/data"
 
-make install-postgresql
+#make install-postgresql
+/workspace/LFS/LFS3/BLFS/bootscripts.sh postgresql
 
 popd
 rm -rf postgresql-9.6.5

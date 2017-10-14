@@ -32,7 +32,8 @@ install -v -m644  doc/{*.{html,txt,fig},ONEWS,TODO} \
     saslauthd/LDAP_SASLAUTHD /usr/share/doc/cyrus-sasl-2.1.26
 install -v -dm700 /var/lib/sasl
 
-make install-saslauthd
+#make install-saslauthd
+/workspace/LFS/LFS3/BLFS/bootscripts.sh saslauthd
 
 popd
 rm -rf cyrus-sasl-2.1.26
