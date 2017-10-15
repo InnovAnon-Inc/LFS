@@ -81,26 +81,31 @@ cp      -vfr      doc/{drafts,rfc,guide} \
 #make install-slapd
 /workspace/LFS/LFS3/BLFS/bootscripts.sh slapd
 
+if `ps auxww|grep -v grep|grep -q slapd` ; then
+/etc/rc.d/init.d/slapd restart
+else
 /etc/rc.d/init.d/slapd start
+fi
 
 ldapsearch -x -b '' -s base '(objectclass=*)' namingContexts | \
-grep -qz \
-'# extended LDIF
+cat -
+#grep -qz \
+#'# extended LDIF
 #
 # LDAPv3
 # base <> with scope baseObject
 # filter: (objectclass=*)
 # requesting: namingContexts
 #
-
 #
-dn:
-namingContexts: dc=my-domain,dc=com
-
+#
+#dn:
+#namingContexts: dc=my-domain,dc=com
+#
 # search result
-search: 2
-result: 0 Success
-
+#search: 2
+#result: 0 Success
+#
 # numResponses: 2
 # numEntries: 1'
 
