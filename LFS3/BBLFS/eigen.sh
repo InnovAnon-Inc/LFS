@@ -11,8 +11,9 @@ else
 fi
 
 #cd eigen
-mkdir eigen-build
-pushd eigen-build
+rm -rf eigen-build
+mkdir  eigen-build
+pushd  eigen-build
 
 cmake ../eigen
 make
