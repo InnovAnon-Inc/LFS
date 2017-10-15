@@ -18,6 +18,7 @@ rm -rf texlive-20170524-source
 tar xf texlive-20170524-source.tar.xz
 pushd texlive-20170524-source
 
+grep -q /opt/texlive/2017/lib /etc/ld.so.conf || \
 cat >> /etc/ld.so.conf << EOF
 # Begin texlive 2017 addition
 

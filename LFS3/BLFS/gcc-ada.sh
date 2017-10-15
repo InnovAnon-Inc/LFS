@@ -2,7 +2,7 @@ set -eo nounset
 
 cd /sources
 
-for k in 
+for k in \
 https://ftp.gnu.org/gnu/gcc/gcc-7.2.0/gcc-7.2.0.tar.xz \
 http://mirrors.cdn.adacore.com/art/591c6d80c7a447af2deed1d7 ; do
 test -f `basename $k` || \
@@ -10,12 +10,13 @@ wget --no-check-certificate \
 	$k
 done
 
-#rm -rf ?
-#tar xf ?
-#pushd ?
+rm -rf gnat-gpl-2017-x86_64-linux-bin
+tar xf 591c6d80c7a447af2deed1d7
+pushd  gnat-gpl-2017-x86_64-linux-bin
 
 make ins-all prefix=/opt/gnat
-exit 2
+
+popd
 
 rm -rf gcc-7.2.0
 tar xf gcc-7.2.0.tar.xz

@@ -21,7 +21,12 @@ sed -ri "s:.*(AUX_MODULES.*valid):\1:" modules.cfg
 sed -r "s:.*(#.*SUBPIXEL_RENDERING) .*:\1:" \
     -i include/freetype/config/ftoption.h
 
-./configure --prefix=/usr --disable-static
+if test -d /usr/include/harfbuzz ; then
+	ABC=--with-harfbuzz=yes
+else
+	ABC=--with-harfbuzz=no
+fi
+./configure --prefix=/usr --disable-static $ABC
 make
 
 make install
