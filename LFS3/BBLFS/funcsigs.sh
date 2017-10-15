@@ -14,9 +14,5 @@ fi
 
 cd funcsigs
 
-for P in python2 python3 ; do
-$P setup.py build
-$P setup.py install --optimize=1 --prefix=/usr
-#$P setup.py install --prefix=/usr
-done
+python setup.py install --optimize=1
 

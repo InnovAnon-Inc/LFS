@@ -30,5 +30,44 @@ make
 make install
 install -v -o ntp -g ntp -d /var/lib/ntp
 
+test -e /etc/ntp.conf || \
+cat > /etc/ntp.conf << "EOF"
+# Asia
+#server 0.asia.pool.ntp.org
+
+# Australia
+#server 0.oceania.pool.ntp.org
+
+# Europe
+#server 0.europe.pool.ntp.org
+
+# North America
+server 0.north-america.pool.ntp.org
+
+# South America
+#server 2.south-america.pool.ntp.org
+
+driftfile /var/lib/ntp/ntp.drift
+pidfile   /var/run/ntpd.pid
+
+leapfile  /etc/ntp.leapseconds
+EOF
+
+cat >> /etc/ntp.conf << "EOF"
+# Security session
+restrict    default limited kod nomodify notrap nopeer noquery
+restrict -6 default limited kod nomodify notrap nopeer noquery
+
+restrict 127.0.0.1
+restrict ::1
+EOF
+
+/workspace/LFS/LFS3/BLFS/bootscripts.sh ntpd
+
+#ntpd -q
+
+ln -v -sf ../init.d/setclock /etc/rc.d/rc0.d/K46setclock &&
+ln -v -sf ../init.d/setclock /etc/rc.d/rc6.d/K46setclock
+
 popd
 rm -rf ntp-4.2.8p10

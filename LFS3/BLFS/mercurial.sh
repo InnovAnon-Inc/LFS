@@ -14,13 +14,13 @@ make build
 
 make doc
 
-rm -rf tests/tmp &&
-TESTFLAGS="-j3 --tmpdir tmp --blacklist blacklists/failed-tests" make check
+#rm -rf tests/tmp &&
+#TESTFLAGS="-j3 --tmpdir tmp --blacklist blacklists/failed-tests" make check
 
-pushd tests  &&
-  rm -rf tmp &&
-  ./run-tests.py --tmpdir tmp test-gpg.t
-popd
+#pushd tests  &&
+#  rm -rf tmp &&
+#  ./run-tests.py --tmpdir tmp test-gpg.t
+#popd
 
 make PREFIX=/usr install-bin
 

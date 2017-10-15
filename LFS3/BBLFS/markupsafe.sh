@@ -14,9 +14,8 @@ fi
 
 cd markupsafe
 
-for P in python2 python3 ; do
-$P setup.py build
-$P setup.py install --optimize=1 --prefix=/usr
-#$P setup.py install --prefix=/usr
-done
+python setup.py build
+python setup.py install --optimize=1
+python3 setup.py build
+python3 setup.py install --optimize=1
 
