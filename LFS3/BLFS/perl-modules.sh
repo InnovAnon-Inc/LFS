@@ -1,6 +1,39 @@
 set -eo nounset
 
-cat << "EOF" | sed 's/^/install /' | cpan
+cd /sources
+
+cat > /dev/null << "HEREFILE"
+for k in \
+https://www.cpan.org/authors/id/M/MW/MWX/Data-Uniqid-0.12.tar.gz \
+http://www.linuxfromscratch.org/patches/blfs/svn/Data-Uniqid-0.12-disable_failing_test-1.patch ; do
+test -f `basename $k` || \
+wget --no-check-certificate \
+	$k
+done
+
+rm -rf Data-Uniqid-0.12
+tar xf Data-Uniqid-0.12.tar.gz
+pushd  Data-Uniqid-0.12
+
+patch -Np1 -i ../Data-Uniqid-0.12-disable_failing_test-1.patch
+
+perl Makefile.PL &&
+make &&
+make test
+
+#PERL_USE_UNSAFE_INC=1 &&
+#make install
+
+make install UNINST=1
+
+popd
+rm -rf Data-Uniqid-0.12
+HEREFILE
+
+
+
+
+cat << "EOF" | grep -v ^# | sed 's/^/install /' | cpan
    Sub::Identify
   SUPER
  Test::MockModule
@@ -186,14 +219,14 @@ XML::LibXML
  File::Slurp::Tiny
 XML::LibXML::Simple
  libxslt
-XML::LibXSLT
+#XML::LibXSLT
  libxml2
  XML::NamespaceSupport
  XML::SAX::Base
 XML::SAX
  XML::SAX
  XML::SAX::Expat
- XML::LibXML
+# XML::LibXML
  Tie::IxHash
 XML::Simple
 XML::Writer

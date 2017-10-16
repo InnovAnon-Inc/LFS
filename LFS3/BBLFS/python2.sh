@@ -21,7 +21,8 @@ export PYTHONIOENCODING=utf-8
             --with-system-expat \
             --with-system-ffi   \
             --with-ensurepip=yes \
-            --enable-unicode=ucs4
+            --enable-unicode=ucs4 \
+		--enable-optimizations
 make
 
 make install
