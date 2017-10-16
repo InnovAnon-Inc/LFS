@@ -30,6 +30,7 @@ cd build
 #tar xf boost_1_65_1.tar.bz2
 #popd
 
+CPPFLAGS=-fpermissive \
 cmake -DCMAKE_BUILD_TYPE=Release                      \
       -DCMAKE_INSTALL_PREFIX=/usr                     \
       -DINSTALL_DOCDIR=share/doc/mysql-10.2.9       \
