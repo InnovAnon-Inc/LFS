@@ -26,9 +26,9 @@ sed -i "s@data/test@\${INSTALL_MYSQLTESTDIR}@g" sql/CMakeLists.txt
 mkdir build
 cd build
 
-pushd /sources
-tar xf boost_1_65_1.tar.bz2
-popd
+#pushd /sources
+#tar xf boost_1_65_1.tar.bz2
+#popd
 
 cmake -DCMAKE_BUILD_TYPE=Release                      \
       -DCMAKE_INSTALL_PREFIX=/usr                     \
@@ -48,8 +48,11 @@ cmake -DCMAKE_BUILD_TYPE=Release                      \
       -DWITH_EMBEDDED_SERVER=ON                       \
       -DSKIP_TESTS=ON                                 \
       -DTOKUDB_OK=0                                   \
-      -DWITH_BOOST=/sources/boost_1_65_1 \
+      -DWITH_BOOST=/sources/boost_1_59_0 \
+      -DDOWNLOAD_BOOST=1 \
       ..
+#      -DWITH_BOOST=/sources/boost_1_65_1 \
+#      ..
 make
 
 #pushd mysql-test
