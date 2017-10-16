@@ -2,20 +2,20 @@ set -eo nounset
 
 cd /other-repos || cd /repos
 
-if [ -d distcc ] ; then
-	pushd distcc
+if [ -d re2c ] ; then
+	pushd re2c
 	git reset --hard
 	git clean -d -f -x
 	git pull origin master
-	git submodule update --init --recursive
 	popd
 else
-	git clone --recursive https://github.com/distcc/distcc.git
+	git clone https://github.com/skvadrik/re2c.git
 fi
 
-cd distcc
+cd re2c/re2c
 
 ./autogen.sh
 ./configure
 make
 make install
+

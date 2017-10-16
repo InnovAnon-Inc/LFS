@@ -7,9 +7,10 @@ if [ -d boost ] ; then
 	git reset --hard
 	git clean -d -f -x
 	git pull origin master
+	git submodule update --init --recursive
 	popd
 else
-	git clone https://github.com/boostorg/boost.git
+	git clone --recursive https://github.com/boostorg/boost.git
 fi
 
 cd boost
