@@ -19,6 +19,7 @@ make
 
 tar xf ../xmlts20130923.tar.gz
 
+test ! -e /etc/init.d/httpd || \
 /etc/init.d/httpd stop
 
 make install

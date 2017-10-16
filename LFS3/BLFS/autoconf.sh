@@ -13,15 +13,12 @@ rm -rf autoconf-2.69
 tar xf autoconf-2.69.tar.xz
 pushd  autoconf-2.69
 
-#mv -v autoconf.texi autoconf269.texi
-#rm -v autoconf.info
-
-./configure --prefix=/usr --program-suffix=-2.69
+./configure --prefix=/usr
 make
 
 make install
-#install -v -m644 autoconf-269.info /usr/share/info
-#install-info --info-dir=/usr/share/info autoconf-269.info
+#install -v -m644 autoconf.info /usr/share/info
+#install-info --info-dir=/usr/share/info autoconf.info
 
 popd
 rm -rf autoconf-2.69
