@@ -14,6 +14,8 @@ fi
 
 cd cpython
 
+export PYTHONIOENCODING=utf-8
+
 autoreconf -fi
 ./configure --with-lto
 #make

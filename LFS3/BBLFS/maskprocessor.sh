@@ -10,8 +10,7 @@ if [ -d maskprocessor ] ; then
 	git submodule update --init
 	popd
 else
-	git clone https://github.com/hashcat/maskprocessor.git
-	git submodule update --init
+	git clone --recursive https://github.com/hashcat/maskprocessor.git
 fi
 
 cd maskprocessor/src

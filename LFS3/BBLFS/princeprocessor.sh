@@ -10,8 +10,7 @@ if [ -d princeprocessor ] ; then
 	git submodule update --init
 	popd
 else
-	git clone https://github.com/hashcat/princeprocessor.git
-	git submodule update --init
+	git clone --recursive https://github.com/hashcat/princeprocessor.git
 fi
 
 cd princeprocessor/src

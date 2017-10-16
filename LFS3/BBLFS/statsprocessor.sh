@@ -10,8 +10,7 @@ if [ -d statsprocessor ] ; then
 	git submodule update --init
 	popd
 else
-	git clone https://github.com/hashcat/statsprocessor.git
-	git submodule update --init
+	git clone --recursive https://github.com/hashcat/statsprocessor.git
 fi
 
 cd statsprocessor/src

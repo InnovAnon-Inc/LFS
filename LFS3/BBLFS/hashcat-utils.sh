@@ -10,8 +10,7 @@ if [ -d hashcat-utils ] ; then
 	git submodule update --init
 	popd
 else
-	git clone https://github.com/hashcat/hashcat-utils.git
-	git submodule update --init
+	git clone --recursive https://github.com/hashcat/hashcat-utils.git
 fi
 
 cd hashcat-utils/src
