@@ -12,7 +12,7 @@ pushd  ninja-1.8.2
 
 python3 configure.py --bootstrap
 
-if `which emacs` ; then
+if which emacs ; then
 emacs -Q --batch -f batch-byte-compile misc/ninja-mode.el
 fi
 
@@ -28,7 +28,7 @@ install -vDm644 misc/bash-completion \
 install -vDm644 misc/zsh-completion \
                 /usr/share/zsh/site-functions/_ninja
 
-if `which emacs` ; then
+if which emacs ; then
 install -vDm644 misc/ninja-mode.el \
                 /usr/share/emacs/site-lisp/ninja-mode.el
 install -vDm644 misc/ninja-mode.elc \

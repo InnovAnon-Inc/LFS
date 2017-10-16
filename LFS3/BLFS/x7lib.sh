@@ -37,8 +37,10 @@ d810ab17e24c1418dedf7207fb2841d4  libpciaccess-0.13.5.tar.bz2
 66662e76899112c0f99e22f2fc775a7e  libxshmfence-1.2.tar.bz2
 EOF
 
+#rm -rf lib
+test -d lib || \
 mkdir lib
-cd lib
+pushd lib
 grep -v '^#' ../lib-7.md5 | awk '{print $2}' | wget -i- -c \
     -B https://www.x.org/pub/individual/lib/
 md5sum -c ../lib-7.md5
@@ -53,7 +55,7 @@ as_root()
 
 export -f as_root
 
-grep -A9 summary *make_check.log
+#grep -A9 summary *make_check.log
 
 #bash -e
 
@@ -94,3 +96,6 @@ done
 
 ln -sv $XORG_PREFIX/lib/X11 /usr/lib/X11 &&
 ln -sv $XORG_PREFIX/include/X11 /usr/include/X11
+
+popd
+#rm -rf lib

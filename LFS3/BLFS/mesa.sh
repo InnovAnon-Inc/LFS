@@ -14,6 +14,8 @@ rm -rf mesa-13.0.4
 tar xf mesa-13.0.4.tar.xz
 pushd  mesa-13.0.4
 
+export PYTHONIOENCODING=utf-8
+
 patch -Np1 -i ../mesa-13.0.4-add_xdemos-1.patch
 
 GLL_DRV="i915,r600,nouveau,radeonsi,svga,swrast"

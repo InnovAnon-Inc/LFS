@@ -18,7 +18,7 @@ cd    build
 cmake -DCMAKE_INSTALL_PREFIX=/usr ..
 make
 
-if `which texlive` ; then
+if which texlive ; then
 make docs
 fi
 

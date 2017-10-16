@@ -17,7 +17,7 @@ pushd  sgml-common-0.6.3
 patch -Np1 -i ../sgml-common-0.6.3-manpage-1.patch &&
 autoreconf -f -i
 
-if `which install-catalog` ; then
+if which install-catalog ; then
 install-catalog --remove /etc/sgml/sgml-ent.cat \
     /usr/share/sgml/sgml-iso-entities-8879.1986/catalog &&
 

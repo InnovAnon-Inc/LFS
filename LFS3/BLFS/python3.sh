@@ -14,6 +14,8 @@ rm -rf Python-3.6.2
 tar xf Python-3.6.2.tar.xz
 pushd Python-3.6.2
 
+export PYTHONIOENCODING=utf-8
+
 CXX="/usr/bin/g++"              \
 ./configure --prefix=/usr       \
             --enable-shared     \

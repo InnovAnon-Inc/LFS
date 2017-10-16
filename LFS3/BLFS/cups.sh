@@ -10,8 +10,10 @@ rm -rf cups-2.2.4
 tar xf cups-2.2.4-source.tar.gz
 pushd  cups-2.2.4
 
+grep -q lp /etc/passwd || \
 useradd -c "Print Service User" -d /var/spool/cups -g lp -s /bin/false -u 9 lp
 
+grep -q lpadmin /etc/group || \
 groupadd -g 19 lpadmin
 
 #usermod -a -G lpadmin <username>
@@ -19,8 +21,6 @@ groupadd -g 19 lpadmin
 sed -i 's#@CUPS_HTMLVIEW@#firefox#' desktop/cups.desktop.in
 
 sed -i '2062,2069d' cups/dest.c
-
-
 
 sed -i 's:444:644:' Makedefs.in
 sed -i '/MAN.EXT/s:.gz::' configure config-scripts/cups-manpages.m4
@@ -45,6 +45,7 @@ echo "ServerName /var/run/cups/cups.sock" > /etc/cups/client.conf
 
 #gtk-update-icon-cache
 
+test -e /etc/pam.d/cups || \
 cat > /etc/pam.d/cups << "EOF"
 # Begin /etc/pam.d/cups
 

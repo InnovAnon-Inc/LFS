@@ -2,10 +2,11 @@ set -eo nounset
 
 cd /sources
 
+rm -rf xc
 mkdir xc
 cd xc
 
-export XORG_PREFIX="/usr"
+export XORG_PREFIX="/opt"
 
 export XORG_CONFIG="--prefix=$XORG_PREFIX --sysconfdir=/etc \
     --localstatedir=/var --disable-static"
@@ -16,21 +17,6 @@ XORG_CONFIG="--prefix=\$XORG_PREFIX --sysconfdir=/etc --localstatedir=/var --dis
 export XORG_PREFIX XORG_CONFIG
 EOF
 chmod 644 /etc/profile.d/xorg.sh
-
-# TODO xorg stuff
-./harfbuzz.sh
-	./freetype.sh
-		./fontconfig.sh
-./util-macros.sh
-
-./libxcp-proto.sh
-	./libxau.sh
-	./libxdmcp.sh
-		./libxcb.sh
-
-			./x7lib.sh
-
-exit 0
 
 cat >> /etc/profile.d/xorg.sh << "EOF"
 
