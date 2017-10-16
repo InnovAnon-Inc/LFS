@@ -26,7 +26,7 @@ sed -i "s@data/test@\${INSTALL_MYSQLTESTDIR}@g" sql/CMakeLists.txt
 mkdir build
 cd build
 
-pushd sources
+pushd /sources
 tar xf boost_1_65_1.tar.bz2
 popd
 
