@@ -44,6 +44,7 @@ cmake -DCMAKE_BUILD_TYPE=Release                      \
       -DWITH_EMBEDDED_SERVER=ON                       \
       -DSKIP_TESTS=ON                                 \
       -DTOKUDB_OK=0                                   \
+      -DWITH_BOOST=/sources/boost_1_65_1.tar.bz2 \
       ..
 make
 
