@@ -3,17 +3,19 @@ set -eo nounset
 # requires openssl
 cd /sources
 
-test -f openssh-7.5p1.tar.gz || \
-wget --no-check-certificate \
-    http://ftp.openbsd.org/pub/OpenBSD/OpenSSH/portable/openssh-7.5p1.tar.gz
+OPENSSH_VERSION=7.6p1
 
-test -f openssh-7.5p1-openssl-1.1.0-1.patch || \
+test -f openssh-$OPENSSH_VERSION.tar.gz || \
 wget --no-check-certificate \
-    http://www.linuxfromscratch.org/patches/blfs/svn/openssh-7.5p1-openssl-1.1.0-1.patch
+    http://ftp.openbsd.org/pub/OpenBSD/OpenSSH/portable/openssh-$OPENSSH_VERSION.tar.gz
 
-rm -rf openssh-7.5p1
-tar xf openssh-7.5p1.tar.gz
-pushd  openssh-7.5p1
+test -f openssh-$OPENSSH_VERSION-openssl-1.1.0-1.patch || \
+wget --no-check-certificate \
+    http://www.linuxfromscratch.org/patches/blfs/svn/openssh-$OPENSSH_VERSION-openssl-1.1.0-1.patch
+
+rm -rf openssh-$OPENSSH_VERSION
+tar xf openssh-$OPENSSH_VERSION.tar.gz
+pushd  openssh-$OPENSSH_VERSION
 
 install  -v -m700 -d /var/lib/sshd
 chown    -v root:sys /var/lib/sshd
@@ -25,7 +27,7 @@ useradd  -c 'sshd PrivSep' \
          -s /bin/false     \
          -u 50 sshd
 
-patch -Np1 -i ../openssh-7.5p1-openssl-1.1.0-1.patch
+patch -Np1 -i ../openssh-$OPENSSH_VERSION-openssl-1.1.0-1.patch
 
 ./configure --prefix=/usr                     \
             --sysconfdir=/etc/ssh             \
@@ -38,9 +40,9 @@ install -v -m755    contrib/ssh-copy-id /usr/bin
 
 install -v -m644    contrib/ssh-copy-id.1 \
                     /usr/share/man/man1
-install -v -m755 -d /usr/share/doc/openssh-7.5p1
+install -v -m755 -d /usr/share/doc/openssh-$OPENSSH_VERSION
 install -v -m644    INSTALL LICENCE OVERVIEW README* \
-                    /usr/share/doc/openssh-7.5p1
+                    /usr/share/doc/openssh-$OPENSSH_VERSION
 
 echo "PermitRootLogin no" >> /etc/ssh/sshd_config
 
@@ -51,4 +53,4 @@ echo "ChallengeResponseAuthentication no" >> /etc/ssh/sshd_config
 /workspace/LFS/LFS3/BLFS/bootscripts.sh sshd
 
 popd
-rm -rf openssh-7.5p1
+rm -rf openssh-$OPENSSH_VERSION
