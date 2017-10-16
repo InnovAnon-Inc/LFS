@@ -6,10 +6,12 @@ if [ -d mysql-server ] ; then
 	pushd mysql-server
 	git reset --hard
 	git clean -d -f -x
-	git pull origin master
+	git checkout 5.7
+	git pull origin 5.7
 	popd
 else
 	git clone https://github.com/mysql/mysql-server.git
+	git checkout 5.7
 fi
 
 cd mysql-server
