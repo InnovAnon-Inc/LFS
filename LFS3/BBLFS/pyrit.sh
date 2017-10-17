@@ -26,6 +26,8 @@ python setup.py clean
 python setup.py build
 python setup.py install --optimize=1
 
+test -d ~/.pyrit || \
+mkdir -vm0755 ~/.pyrit
 test -e ~/.pyrit/config || \
 cat > ~/.pyrit/config << "EOF"
 use_CUDA = true
