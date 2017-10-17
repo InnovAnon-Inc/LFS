@@ -35,7 +35,7 @@ use_OpenCL = false
 limit_ncpus = -1
 EOF
 
-cd modules/cpyrit-cuda
+cd modules/cpyrit_cuda
 python setup.py build
 python setup.py install --optimize=1
 
