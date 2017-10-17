@@ -20,7 +20,9 @@ pushd  openssh-$OPENSSH_VERSION
 install  -v -m700 -d /var/lib/sshd
 chown    -v root:sys /var/lib/sshd
 
+grep -q sshd /etc/group || \
 groupadd -g 50 sshd
+grep -q sshd /etc/passwd || \
 useradd  -c 'sshd PrivSep' \
          -d /var/lib/sshd  \
          -g sshd           \
@@ -44,9 +46,11 @@ install -v -m755 -d /usr/share/doc/openssh-$OPENSSH_VERSION
 install -v -m644    INSTALL LICENCE OVERVIEW README* \
                     /usr/share/doc/openssh-$OPENSSH_VERSION
 
+grep -q '^PermitRootLogin no' /etc/ssh/sshd_config || \
 echo "PermitRootLogin no" >> /etc/ssh/sshd_config
-
+grep -q 'PasswordAuthentication no' /etc/ssh/sshd_config || \
 echo "PasswordAuthentication no" >> /etc/ssh/sshd_config
+grep -q 'ChallengeResponseAuthentication no' /etc/ssh/sshd_config || \
 echo "ChallengeResponseAuthentication no" >> /etc/ssh/sshd_config
 
 #make install-sshd

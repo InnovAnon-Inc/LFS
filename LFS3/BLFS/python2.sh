@@ -14,7 +14,7 @@ rm -rf Python-2.7.14
 tar xf Python-2.7.14.tar.xz
 pushd  Python-2.7.14
 
-export PYTHONIOENCODING=utf-8
+#export PYTHONIOENCODING=utf-8
 
 ./configure --prefix=/usr       \
             --enable-shared     \
