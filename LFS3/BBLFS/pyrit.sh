@@ -2,8 +2,8 @@ set -eo nounset
 
 cd /other-repos || cd /repos
 
-if [ -d pyrit ] ; then
-	pushd pyrit
+if [ -d Pyrit ] ; then
+	pushd Pyrit
 	git reset --hard
 	git clean -d -f -x
 	git pull origin master
@@ -12,7 +12,7 @@ else
 	git clone https://github.com/JPaulMora/Pyrit.git
 fi
 
-cd pyrit
+cd Pyrit
 
 #./autogen.sh
 #./configure
