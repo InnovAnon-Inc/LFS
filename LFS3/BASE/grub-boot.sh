@@ -29,10 +29,10 @@ else
 	echo Modern UEFI Grub Install
 
 	#../BLFS/openssl.sh
-	../BLFS/make-ca.sh
-	../BLFS/wget.sh
+	#../BLFS/make-ca.sh
+	#../BLFS/wget.sh
 
-	../BLFS/NSPR.sh
+	../BLFS/nspr.sh
 	../BBLFS/libedit.sh
 	../BLFS/unzip.sh
 	../BLFS/SQLite.sh
