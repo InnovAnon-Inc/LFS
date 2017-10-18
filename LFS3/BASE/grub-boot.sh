@@ -32,10 +32,10 @@ else
 	#../BLFS/make-ca.sh
 	#../BLFS/wget.sh
 
-	../BLFS/nspr.sh
-	../BBLFS/libedit.sh
-	../BLFS/unzip.sh
-	../BLFS/SQLite.sh
+	#../BLFS/nspr.sh
+	#../BBLFS/libedit.sh
+	#../BLFS/unzip.sh
+	../BLFS/sqlite.sh
 	../BLFS/libtasn.sh
 	../BLFS/p11-kit.sh
 	../BLFS/NSS.sh
