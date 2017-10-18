@@ -41,4 +41,8 @@ install uhci_hcd /sbin/modprobe ehci_hcd ; /sbin/modprobe -i uhci_hcd ; true
 EOF
 
 popd
+rm -rf /usr/src/linux-4.13.3
+cp -r linux-4.13.3 /usr/src/linux-4.13.3
+chown -R 0:0 /usr/src/linux-4.13.3
+#ln -s /usr/src/linux-4.13.3 /usr/src/linux
 rm -rf linux-4.13.3

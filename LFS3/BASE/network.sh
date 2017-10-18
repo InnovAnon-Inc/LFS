@@ -31,8 +31,8 @@ test -e /etc/hosts || \
 cat > /etc/hosts << "EOF"
 # Begin /etc/hosts
 
-127.0.0.1 localhost
-127.0.1.1 1980sLT.innovanon.com 1980sLT
+127.0.0.1    localhost
+127.0.1.1    1980sLT.innovanon.com 1980sLT
 192.168.1.70 1980sLT.innovanon.com 1980sLT
 ::1       localhost ip6-localhost ip6-loopback
 ff02::1   ip6-allnodes

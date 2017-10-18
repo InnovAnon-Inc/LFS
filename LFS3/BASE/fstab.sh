@@ -19,6 +19,13 @@ devtmpfs       /dev         devtmpfs mode=0755,nosuid    0     0
 #noauto,user,quiet,showexec,iocharset=koi8r,codepage=866
 #noauto,user,quiet,showexec,iocharset=utf8,codepage=866
 
+/dev/sda2      /mnt/slacko  ext4     defaults            2     2
+
+/mnt/slacko/ccache.img /root/.ccache ext4 defaults,loop 0 0
+/mnt/slacko/sources    /sources      none defaults,bind 0 0
+/mnt/slacko/repos      /repos        none defaults,bind 0 0
+# /workspace
+
 # End /etc/fstab
 EOF
 
