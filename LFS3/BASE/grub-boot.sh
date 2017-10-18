@@ -66,10 +66,10 @@ else
 #	--pubkey=?               \
 #	--themes=?               \
 #	--core-compress=xz       \
+#	--locales=C              \
 
 grub-install \
 	--compress=xz            \
-	--locales=C              \
 	--bootloader-id=lfs-grub \
 	--efi-directory=/efi     \
 	--no-bootsector          \
