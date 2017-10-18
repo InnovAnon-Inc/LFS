@@ -5,12 +5,14 @@ bash /lib/udev/init-net-rules.sh
 
 cat /etc/udev/rules.d/70-persistent-net.rules
 
-udevadm test /sys/block/hdd
+# checking for CD-ROM device, e.g., "hdd"
+#udevadm test /sys/block/hdd
 
 #sed -i -e 's/"write_cd_rules"/"write_cd_rules mode"/' \
 #    /etc/udev/rules.d/83-cdrom-symlinks.rules
 
-udevadm info -a -p /sys/class/video4linux/video0
+# checking for video device
+#udevadm info -a -p /sys/class/video4linux/video0
 
 #cat > /etc/udev/rules.d/83-duplicate_devs.rules << "EOF"
 #
