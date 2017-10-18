@@ -31,5 +31,5 @@ make -j1 V=1 libdir=/usr/lib \
 	bindir=/usr/bin mandir=/usr/share/man \
 	includedir=/usr/include install
 
-install -vDm0577 src/test/tester /usr/bin/efivar-tester
+#install -vDm0577 src/test/tester /usr/bin/efivar-tester
 
