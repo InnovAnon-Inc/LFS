@@ -15,7 +15,9 @@ make
 make install
 
 install -v -m755 -d /usr/share/doc/popt-1.16 &&
+if which doxygen ; then
 install -v -m644 doxygen/html/* /usr/share/doc/popt-1.16
+fi
 
 popd
 rm -rf popt-1.16

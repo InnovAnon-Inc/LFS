@@ -38,12 +38,12 @@ else
 	#../BLFS/sqlite-autoconf.sh
 	#../BLFS/libtasn.sh
 	#../BLFS/p11-kit.sh
-	../BLFS/nss.sh
-	../BLFS/make-ca.sh
-	../BLFS/nettle.sh
-	../BLFS/libunistring.sh
-	../BLFS/gnutls.sh
-	../BLFS/wget.sh
+	#../BLFS/nss.sh
+	#../BLFS/make-ca.sh
+	#../BLFS/nettle.sh
+	#../BLFS/libunistring.sh
+	#../BLFS/gnutls.sh
+	#../BLFS/wget.sh
 
 	../BLFS/popt-static.sh
 	../BLFS/pciutils-static.sh
