@@ -15,6 +15,19 @@ set +h
 # overwrite current boot loader
 #grub-install /dev/sda
 
+if [ ! -d /sys/firmware/efi ] ; then
+	echo Legacy BIOS Grub Install
+grub-install \
+	--compress=xz            \
+	--locales=POSIX          \
+	--no-bootsector          \
+	--removable              \
+        --recheck                \
+        --debug                  \
+	/dev/sda
+else
+	echo Modern UEFI Grub Install
+
 #	--pubkey=?               \
 #	--themes=?               \
 #	--core-compress=xz       \
@@ -32,6 +45,9 @@ grub-install \
 	/dev/sda
 
 #efibootmgr -c -d /dev/sda -p 4 -l '\EFI\lfs-grub\bootx86.efi' -L 'LFS Grub BootLoader'
+
+fi
+
 
 test -e /boot/grub/grub.cfg || \
 cat > /boot/grub/grub.cfg << "EOF"
