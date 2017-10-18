@@ -1,4 +1,5 @@
 set -eo nounset
+set +h
 
 bash /lib/udev/init-net-rules.sh
 

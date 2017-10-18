@@ -1,4 +1,5 @@
 set -eo nounset
+set +h
 
 # TODO preparing virtual kernel file systems
 # TODO entering the chroot environment

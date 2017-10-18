@@ -1,4 +1,5 @@
 set -eo nounset
+set +h
 
 test -e /etc/lfs-release || \
 echo SVN-20170924 > /etc/lfs-release

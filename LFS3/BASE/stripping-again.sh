@@ -1,3 +1,6 @@
+set -eo nounset
+set +h
+
 save_lib="ld-2.26.so libc-2.26.so libpthread-2.26.so libthread_db-1.0.so"
 
 cd /lib

@@ -1,14 +1,14 @@
 set -eo nounset
 
-MNT=/mnt/lfs
+export LFS=/mnt/lfs
 
-chown -v -R lfs:lfs $MNT/sources
+chown -v -R lfs:lfs $LFS/sources
 
-rm -rf /tools $MNT/tools
-mkdir $MNT/tools
-chown -v lfs:lfs $MNT/tools
-chmod -v a+wt $MNT/tools
-ln -v -s $MNT/tools /tools
+rm -rf /tools $LFS/tools
+mkdir $LFS/tools
+chown -v lfs:lfs $LFS/tools
+chmod -v a+wt $LFS/tools
+ln -v -s $LFS/tools /tools
 
 su - lfs << EOF2
 source \$HOME/.bashrc

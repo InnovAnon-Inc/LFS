@@ -1,4 +1,5 @@
 set -eo nounset
+set +h
 
 mv -v /tools/bin/{ld,ld-old}
 mv -v /tools/$(uname -m)-pc-linux-gnu/bin/{ld,ld-old}

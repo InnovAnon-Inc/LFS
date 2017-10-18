@@ -1,17 +1,23 @@
 set -eo nounset
 
-MNT=/mnt/lfs
+export LFS=/mnt/lfs
 
-cp -a /workspace/LFS/LFS3/* /mnt/lfs/alfs
+if [ ! -d /mnt/lfs/workspace ] ; then
+	mkdir -v /mnt/lfs/workspace
+	chmod a+wt /mnt/lfs/workspace
+fi
+if [ ! -d /mnt/lfs/workspace/LFS ] ; then
+	cp -r /workspace/LFS /mnt/lfs/workspace/LFS
+fi
 
-#LFS=$MNT ./preparing-virtual-kernel-file-systems.sh
+./preparing-virtual-kernel-file-systems.sh
 
-chroot "$MNT" /tools/bin/env -i \
+chroot "$LFS" /tools/bin/env -i \
     HOME=/root                  \
     TERM="$TERM"                \
     PS1='\u:\w\$ '              \
     PATH=/bin:/usr/bin:/sbin:/usr/sbin:/tools/bin \
     /tools/bin/bash +h << EOF
-cd /alfs/BASE
+cd /workspace/LFS/LFS3/BASE
 ./base.sh
 EOF

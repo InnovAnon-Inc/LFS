@@ -1,4 +1,5 @@
 set -eo nounset
+set +h
 
 ./libtool.sh
 ./gdbm.sh

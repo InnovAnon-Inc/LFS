@@ -1,3 +1,6 @@
+set -eo nounset
+set +h
+
 rm -rf /tmp/*
 
 #chroot "$LFS" /usr/bin/env -i              \

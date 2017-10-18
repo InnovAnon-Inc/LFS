@@ -1,4 +1,5 @@
 set -eo nounset
+set +h
 
 test -e /etc/inputrc || \
 cat > /etc/inputrc << "EOF"

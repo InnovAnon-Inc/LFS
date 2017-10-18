@@ -1,4 +1,5 @@
 set -eo nounset
+set +h
 
 cd /etc/sysconfig/
 test -e ifconfig.eth0 || \
