@@ -59,9 +59,9 @@ else
 	#../BLFS/curl.sh
 	#../BLFS/git.sh
 	#../BBLFS/efivar.sh
-	../BBLFS/efibootmgr.sh
-	../BBLFS/unifont.sh
-	../BASE/grub-efi.sh
+	#../BBLFS/efibootmgr.sh
+	#../BBLFS/unifont.sh
+	#../BASE/grub-efi.sh
 
 #	--pubkey=?               \
 #	--themes=?               \
@@ -69,7 +69,7 @@ else
 
 grub-install \
 	--compress=xz            \
-	--locales=POSIX          \
+	--locales=en_US.utf8     \
 	--bootloader-id=lfs-grub \
 	--efi-directory=/efi     \
 	--no-bootsector          \
