@@ -28,7 +28,7 @@ grub-install \
 else
 	echo Modern UEFI Grub Install
 
-	../BLFS/openssl.sh
+	#../BLFS/openssl.sh
 	../BLFS/make-ca.sh
 	../BLFS/wget.sh
 
