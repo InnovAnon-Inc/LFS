@@ -1,6 +1,7 @@
 set -eo nounset
 set +h
 
+test -f /etc/udev/rules.d/70-persistent-net.rules || \
 bash /lib/udev/init-net-rules.sh
 
 cat /etc/udev/rules.d/70-persistent-net.rules
