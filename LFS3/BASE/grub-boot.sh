@@ -17,12 +17,12 @@ set +h
 
 #	--pubkey=?               \
 #	--themes=?               \
+#	--core-compress=xz       \
 
 grub-install \
 	--compress=xz            \
 	--locales=POSIX          \
 	--bootloader-id=lfs-grub \
-	--core-compress=xz       \
 	--efi-directory=/efi     \
 	--no-bootsector          \
 	--removable              \
