@@ -35,10 +35,10 @@ else
 	#../BLFS/nspr.sh
 	#../BBLFS/libedit.sh
 	#../BLFS/unzip.sh
-	../BLFS/sqlite-autoconf.sh
-	../BLFS/libtasn.sh
-	../BLFS/p11-kit.sh
-	../BLFS/NSS.sh
+	#../BLFS/sqlite-autoconf.sh
+	#../BLFS/libtasn.sh
+	#../BLFS/p11-kit.sh
+	../BLFS/nss.sh
 	../BLFS/make-ca.sh
 	../BLFS/nettle.sh
 	../BLFS/libunistring.sh
