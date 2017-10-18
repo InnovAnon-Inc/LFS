@@ -45,7 +45,7 @@ else
 	#../BLFS/gnutls.sh
 	#../BLFS/wget.sh
 
-	../BLFS/popt-static.sh
+	#../BLFS/popt-static.sh
 	../BLFS/pciutils-static.sh
 	../BLFS/which-static.sh
 	../BLFS/libpng-static.sh

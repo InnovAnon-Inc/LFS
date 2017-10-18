@@ -21,7 +21,7 @@ make PREFIX=/usr                \
      STATIC=yes                 \
      install install-lib        &&
 
-chmod -v 755 /usr/lib/libpci.so
+chmod -v 755 /usr/lib/libpci.a
 
 popd
 rm -rf pciutils-3.5.5
