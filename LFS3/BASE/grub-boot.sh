@@ -27,7 +27,7 @@ grub-install \
 	--no-bootsector          \
 	--removable              \
         --recheck                \
-	--target=x86_64=efi      \
+	--target=x86_64-efi      \
         --debug                  \
 	/dev/sda
 
