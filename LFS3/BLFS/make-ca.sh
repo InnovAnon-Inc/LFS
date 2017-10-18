@@ -14,7 +14,9 @@ tar xf make-ca-$MAKE_CA_VERSION.tar.gz
 pushd  make-ca-$MAKE_CA_VERSION
 
 install -vdm755 /etc/ssl/local
+test -f root.crt || \
 wget --no-check-certificate http://www.cacert.org/certs/root.crt
+test -f class3.crt || \
 wget --no-check-certificate http://www.cacert.org/certs/class3.crt
 openssl x509 -in root.crt -text -fingerprint -setalias "CAcert Class 1 root" \
         -addtrust serverAuth -addtrust emailProtection -addtrust codeSigning \
