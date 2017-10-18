@@ -46,10 +46,12 @@ else
 
 #efibootmgr -c -d /dev/sda -p 4 -l '\EFI\lfs-grub\bootx86.efi' -L 'LFS Grub BootLoader'
 
-echo TODO there is (Beyond) BLFS stuff to do here
+echo TODO there is '(Beyond)' BLFS stuff to do here
 fi
 
-
+if [ ! -d /boot/grug ] ; then
+	echo ACHTUNG skipping Grub Configuration
+else
 test -e /boot/grub/grub.cfg || \
 cat > /boot/grub/grub.cfg << "EOF"
 # Begin /boot/grub/grub.cfg
@@ -65,6 +67,7 @@ menuentry "GNU/Linux, Linux 4.13.7-lfs-SVN-20171015" {
         linux   /boot/vmlinuz-4.13.7-lfs-SVN-20171015 root=/dev/sda4 ro
 }
 EOF
+fi
 
 # TODO grub-mkconfig
 
