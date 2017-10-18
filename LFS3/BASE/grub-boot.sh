@@ -28,6 +28,23 @@ grub-install \
 else
 	echo Modern UEFI Grub Install
 
+	../BLFS/openssl.sh
+	../BLFS/make-ca.sh
+	../BLFS/wget.sh
+
+	../BLFS/NSPR.sh
+	../BBLFS/libedit.sh
+	../BLFS/unzip.sh
+	../BLFS/SQLite.sh
+	../BLFS/libtasn.sh
+	../BLFS/p11-kit.sh
+	../BLFS/NSS.sh
+	../BLFS/make-ca.sh
+	../BLFS/nettle.sh
+	../BLFS/libunistring.sh
+	../BLFS/gnutls.sh
+	../BLFS/wget.sh
+
 	../BLFS/popt-static.sh
 	../BLFS/pciutils-static.sh
 	../BLFS/which-static.sh
