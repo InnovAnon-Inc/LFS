@@ -2,9 +2,10 @@ set -eo nounset
 
 export LFS=/mnt/lfs
 
+# TODO maybe use a loop mount
 if [ ! -d /mnt/lfs/workspace ] ; then
 	mkdir -v /mnt/lfs/workspace
-	chmod a+wt /mnt/lfs/workspace
+	chmod -v a+wt /mnt/lfs/workspace
 fi
 if [ ! -d /mnt/lfs/workspace/LFS ] ; then
 	cp -r /workspace/LFS /mnt/lfs/workspace/LFS

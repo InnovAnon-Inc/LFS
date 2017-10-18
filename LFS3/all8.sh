@@ -11,6 +11,10 @@ chroot "$LFS" /usr/bin/env -i \
     PS1='\u:\w\$ '              \
     PATH=/bin:/usr/bin:/sbin:/usr/sbin \
     /bin/bash +h << EOF
+install -dvm0755 /efi
+mount -vt vfat /dev/sda1 /efi
+trap "umount -vf /efi" 0
+
 cd /workspace/LFS/LFS3/BASE
 ./base6.sh
 EOF

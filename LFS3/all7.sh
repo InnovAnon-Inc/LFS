@@ -6,8 +6,8 @@ export LFS=/mnt/lfs
 #./preparing-virtual-kernel-file-systems.sh
 
 # this handles the case when the host has a separate /boot partition
-#mount --bind /boot $LFS/boot
-#trap "umount -f /boot $LFS/boot" 0
+#mount -v --bind /boot $LFS/boot
+#trap "umount -vf /boot $LFS/boot" 0
 
 ( set -eo nounset
 cat << EOF

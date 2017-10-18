@@ -5,7 +5,7 @@ export LFS=/mnt/lfs
 chown -v -R lfs:lfs $LFS/sources
 
 rm -rf /tools $LFS/tools
-mkdir $LFS/tools
+mkdir -v $LFS/tools
 chown -v lfs:lfs $LFS/tools
 chmod -v a+wt $LFS/tools
 ln -v -s $LFS/tools /tools
