@@ -56,8 +56,8 @@ else
 	#../BLFS/harfbuzz-static.sh
 	#../BLFS/freetype2-static.sh
 	#../BLFS/dosfstools.sh
-	../BLFS/curl.sh
-	../BLFS/git.sh
+	#../BLFS/curl.sh
+	#../BLFS/git.sh
 	../BBLFS/efivar.sh
 	../BBLFS/efibootmgr.sh
 	../BBLFS/unifont.sh
