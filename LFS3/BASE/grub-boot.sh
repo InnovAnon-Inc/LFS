@@ -28,31 +28,44 @@ grub-install \
 else
 	echo Modern UEFI Grub Install
 
+	../BLFS/popt-static.sh
+	../BLFS/pciutils-static.sh
+	../BLFS/which-static.sh
+	../BLFS/libpng-static.sh
+	../BLFS/freetype2-static.sh
+	../BLFS/harfbuzz-static.sh
+	../BLFS/freetype2-static.sh
+	../BLFS/dosfstools.sh
+	../BBLFS/efivar.sh
+	../BBLFS/efibootmgr.sh
+	../BBLFS/unifont.sh
+	../BASE/grub-efi.sh
+
 #	--pubkey=?               \
 #	--themes=?               \
 #	--core-compress=xz       \
 
-#grub-install \
-#	--compress=xz            \
-#	--locales=POSIX          \
-#	--bootloader-id=lfs-grub \
-#	--efi-directory=/efi     \
-#	--no-bootsector          \
-#	--removable              \
-#        --recheck                \
-#	--target=x86_64-efi      \
-#        --debug                  \
-#	/dev/sda
+grub-install \
+	--compress=xz            \
+	--locales=POSIX          \
+	--bootloader-id=lfs-grub \
+	--efi-directory=/efi     \
+	--no-bootsector          \
+	--removable              \
+        --recheck                \
+	--target=x86_64-efi      \
+        --debug                  \
+	/dev/sda
 
 #efibootmgr -c -d /dev/sda -p 4 -l '\EFI\lfs-grub\bootx86.efi' -L 'LFS Grub BootLoader'
 
 echo TODO there is '(Beyond)' BLFS stuff to do here
 fi
 
-if [ ! -d /boot/grug ] ; then
+if [ ! -d /boot/grub ] ; then
 	echo ACHTUNG skipping Grub Configuration
-else
-test -e /boot/grub/grub.cfg || \
+elif [ ! -e /boot/grub/grub.cfg ] ; then
+if [ ! -d /sys/firmware/efi ] ; then
 cat > /boot/grub/grub.cfg << "EOF"
 # Begin /boot/grub/grub.cfg
 set default=0
@@ -67,6 +80,35 @@ menuentry "GNU/Linux, Linux 4.13.7-lfs-SVN-20171015" {
         linux   /boot/vmlinuz-4.13.7-lfs-SVN-20171015 root=/dev/sda4 ro
 }
 EOF
+else
+cat > /boot/grub/grub.cfg << "EOF"
+# Begin /boot/grub/grub.cfg
+set default=0
+set timeout=5
+
+insmod gzio
+insmod part_gpt
+insmode ext2
+set root=(hd0,gpt4)
+
+insmod efi_gop
+insmod efi_uga
+insmod font
+if loadfont /grub/unicode.pf2; then
+	loadfont /grub/unicode.pf2
+	set bfxmode=auto
+	insmod gfxterm
+	set gfxpayload=keep
+	terminal_output gfxterm
+fi
+
+menuentry "GNU/Linux, Linux 4.13.7-lfs-SVN-20171015" {
+	# if using a separate boot partition,
+	# then remove /boot file path prefix
+        linux   /boot/vmlinuz-4.13.7-lfs-SVN-20171015 root=/dev/sda4 ro
+}
+EOF
+fi
 fi
 
 # TODO grub-mkconfig
