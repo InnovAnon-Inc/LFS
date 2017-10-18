@@ -58,7 +58,7 @@ else
 	#../BLFS/dosfstools.sh
 	#../BLFS/curl.sh
 	#../BLFS/git.sh
-	../BBLFS/efivar.sh
+	#../BBLFS/efivar.sh
 	../BBLFS/efibootmgr.sh
 	../BBLFS/unifont.sh
 	../BASE/grub-efi.sh

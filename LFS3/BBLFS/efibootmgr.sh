@@ -14,7 +14,7 @@ fi
 
 cd efibootmgr
 
-make
+EFIDIR=/efi make
 
 install -vDm0755 src/efibootmgr /usr/sbin/efibootmgr
 install -vDm0644 src/efibootmgr.8 \
