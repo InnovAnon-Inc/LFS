@@ -29,5 +29,5 @@ devtmpfs       /dev         devtmpfs mode=0755,nosuid    0     0
 # End /etc/fstab
 EOF
 
-# TODO
-hdparm -I /dev/sda | grep NCQ
+#../BLFS/hdparm.sh
+#hdparm -I /dev/sda | grep NCQ
