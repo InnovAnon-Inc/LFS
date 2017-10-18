@@ -8,7 +8,7 @@ set +h
 #LC_ALL=$LN locale charmap
 #LC_ALL=$LN locale int_curr_symbol
 #LC_ALL=$LN locale int_prefix
-done
+#done
 
 test -e /etc/profile || \
 cat > /etc/profile << "EOF"
