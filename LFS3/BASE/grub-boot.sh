@@ -46,12 +46,15 @@ else
 	#../BLFS/wget.sh
 
 	#../BLFS/popt-static.sh
-	../BLFS/pciutils-static.sh
-	../BLFS/which-static.sh
-	../BLFS/libpng-static.sh
-	../BLFS/freetype2-static.sh
-	../BLFS/harfbuzz-static.sh
-	../BLFS/freetype2-static.sh
+	#../BLFS/pciutils-static.sh
+	#../BLFS/which-static.sh
+	#../BLFS/libpng-static.sh
+	#../BLFS/freetype2-static.sh
+	# glib
+	# gobject-introspection, python
+	# ...
+	#../BLFS/harfbuzz-static.sh
+	#../BLFS/freetype2-static.sh
 	../BLFS/dosfstools.sh
 	../BBLFS/efivar.sh
 	../BBLFS/efibootmgr.sh
