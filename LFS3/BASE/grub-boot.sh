@@ -69,7 +69,7 @@ else
 
 grub-install \
 	--compress=xz            \
-	--locales=en_US.utf8     \
+	--locales=C              \
 	--bootloader-id=lfs-grub \
 	--efi-directory=/efi     \
 	--no-bootsector          \
