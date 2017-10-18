@@ -32,20 +32,21 @@ else
 #	--themes=?               \
 #	--core-compress=xz       \
 
-grub-install \
-	--compress=xz            \
-	--locales=POSIX          \
-	--bootloader-id=lfs-grub \
-	--efi-directory=/efi     \
-	--no-bootsector          \
-	--removable              \
-        --recheck                \
-	--target=x86_64-efi      \
-        --debug                  \
-	/dev/sda
+#grub-install \
+#	--compress=xz            \
+#	--locales=POSIX          \
+#	--bootloader-id=lfs-grub \
+#	--efi-directory=/efi     \
+#	--no-bootsector          \
+#	--removable              \
+#        --recheck                \
+#	--target=x86_64-efi      \
+#        --debug                  \
+#	/dev/sda
 
 #efibootmgr -c -d /dev/sda -p 4 -l '\EFI\lfs-grub\bootx86.efi' -L 'LFS Grub BootLoader'
 
+echo TODO there is (Beyond) BLFS stuff to do here
 fi
 
 
