@@ -19,9 +19,11 @@ fi
 
 make install
 
+if which texlive ; then
 install -v -dm755 /usr/share/doc/libassuan-2.4.3 &&
 install -v -m644  doc/assuan.{pdf,ps,dvi} \
                   /usr/share/doc/libassuan-2.4.3
+fi
 
 popd
 rm -rf libassuan-2.4.3

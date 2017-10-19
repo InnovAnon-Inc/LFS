@@ -11,9 +11,9 @@ wget --no-check-certificate \
 	$k
 done
 
-rm -rf jdk8u141-b15
+rm -rf jdk8u-jdk8u141-b15
 tar xf jdk8u141-b15.tar.bz2
-pushd  jdk8u141-b15
+pushd  jdk8u-jdk8u141-b15
 
 cat > subprojects.md5 << EOF
 4061c0f2dc553cf92847e4a39a03ea4e  corba.tar.bz2
@@ -26,8 +26,10 @@ c2f06cd8d6e90f3dcc57bec53f419afe  nashorn.tar.bz2
 EOF
 
 for subproject in corba hotspot jaxp jaxws langtools jdk nashorn; do
+	test -f ../${subproject}.tar.bz2 || \
   wget -c http://hg.openjdk.java.net/jdk8u/jdk8u/${subproject}/archive/jdk8u141-b15.tar.bz2 \
-       -O ${subproject}.tar.bz2
+       -O ../${subproject}.tar.bz2
+	cp ../${subproject}.tar.bz2 ${subproject}.tar.bz2
 done
 
 md5sum -c subprojects.md5
@@ -38,6 +40,8 @@ for subproject in corba hotspot jaxp jaxws langtools jdk nashorn; do
 done
 
 tar -xf ../jtreg-4.2-b08-891.tar.gz
+
+export PATH=/opt/jdk/bin:$PATH
 
 unset JAVA_HOME
 sh ./configure                \
@@ -137,5 +141,4 @@ cd /opt/jdk
 bin/keytool -list -keystore /etc/ssl/java/cacerts
 
 popd
-rm -rf jdk8u141-b15
-
+rm -rf jdk8u-jdk8u141-b15

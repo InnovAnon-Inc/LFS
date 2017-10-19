@@ -23,6 +23,7 @@ makeinfo --plaintext       -o doc/cpio.txt  doc/cpio.texi
 #make -C doc ps
 
 make install
+if which texdoc ; then
 install -v -m755 -d /usr/share/doc/cpio-2.12/html
 install -v -m644    doc/html/* \
                     /usr/share/doc/cpio-2.12/html
@@ -31,6 +32,7 @@ install -v -m644    doc/cpio.{html,txt} \
 
 install -v -m644 doc/cpio.{pdf,ps,dvi} \
                  /usr/share/doc/cpio-2.12
+fi
 
 popd
 rm -rf cpio-2.12

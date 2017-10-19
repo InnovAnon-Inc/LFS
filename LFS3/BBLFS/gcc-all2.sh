@@ -42,7 +42,8 @@ cd    build
     --prefix=/usr          \
     --disable-multilib     \
     --with-system-zlib     \
-    --enable-languages=ada
+    --enable-languages=ada,brig,c,c++,fortran,go,jit,lto,objc,obj-c++ \
+    --enable-install-libiberty
 make
 
 #ulimit -s 32768
@@ -57,6 +58,13 @@ mv -v /usr/lib/*gdb.py /usr/share/gdb/auto-load/usr/lib
 chown -v -R root:root \
     /usr/lib/gcc/*linux-gnu/7.2.0/include{,-fixed} \
     /usr/lib/gcc/*linux-gnu/7.2.0/ada{lib,include}
+chown -v -R root:root \
+    /usr/lib/gcc/*linux-gnu/7.2.0/include{,-fixed}
+
+ln -v -sf ../usr/bin/cpp /lib
+ln -v -sf gcc /usr/bin/cc
+install -v -dm755 /usr/lib/bfd-plugins
+ln -sfv ../../libexec/gcc/$(gcc -dumpmachine)/7.2.0/liblto_plugin.so /usr/lib/bfd-plugins/
 
 #rm -rf /opt/gnat
 

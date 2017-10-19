@@ -17,12 +17,14 @@ sed -e '/noinst_SCRIPTS = gpg-zip/c sbin_SCRIPTS += gpg-zip' \
             --enable-symcryptrun     \
             --enable-maintainer-mode \
             --docdir=/usr/share/doc/gnupg-2.2.1 &&
-make &&
+make
 
+if which texlive ; then
 makeinfo --html --no-split \
          -o doc/gnupg_nochunks.html doc/gnupg.texi &&
 makeinfo --plaintext       \
          -o doc/gnupg.txt           doc/gnupg.texi
+fi
 
 if which texlive ; then
 make -C doc pdf ps html
@@ -30,11 +32,13 @@ fi
 
 make install &&
 
+if which texlive ; then
 install -v -m755 -d /usr/share/doc/gnupg-2.2.1/html            &&
 install -v -m644    doc/gnupg_nochunks.html \
                     /usr/share/doc/gnupg-2.2.1/html/gnupg.html &&
 install -v -m644    doc/*.texi doc/gnupg.txt \
                     /usr/share/doc/gnupg-2.2.1
+fi
 
 if which texlive ; then
 install -v -m644 doc/gnupg.html/* \

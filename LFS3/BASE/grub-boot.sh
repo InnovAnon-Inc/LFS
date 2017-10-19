@@ -67,6 +67,7 @@ else
 #	--themes=?               \
 #	--core-compress=xz       \
 #	--locales=C              \
+#	/dev/sda4
 
 grub-install \
 	--compress=xz            \
@@ -77,7 +78,7 @@ grub-install \
         --recheck                \
 	--target=x86_64-efi      \
         --debug                  \
-	/dev/sda
+	/dev/sda4
 
 #efibootmgr -c -d /dev/sda -p 4 -l '\EFI\lfs-grub\bootx86.efi' -L 'LFS Grub BootLoader'
 
@@ -111,7 +112,7 @@ set timeout=5
 insmod gzio
 insmod part_gpt
 insmode ext2
-set root=(hd0,gpt4)
+#set root=(hd0,gpt4)
 
 insmod efi_gop
 insmod efi_uga

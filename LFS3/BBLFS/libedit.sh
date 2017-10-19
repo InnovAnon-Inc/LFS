@@ -11,7 +11,7 @@ tar xf libedit-20170329-3.1.tar.gz
 pushd  libedit-20170329-3.1
 
 autoreconf -fi
-./configure
+./configure --prefix=/usr
 make
 make install
 
