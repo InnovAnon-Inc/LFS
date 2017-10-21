@@ -5,7 +5,7 @@ set -eo nounset
 #./binutils-pass1.sh
 #./gcc-pass1.sh
 #./linux-headers.sh
-#./glibc.sh
+#./musl-libc.sh
 # borked ./gcc-libstdc++.sh
 ./binutils-pass2.sh
 ./gcc-pass2.sh
