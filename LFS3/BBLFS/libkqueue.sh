@@ -14,6 +14,6 @@ fi
 
 cd libkqueue
 
-cmake .
+cmake -DCMAKE_INSTALL_PREFIX=/usr .
 make
 make install

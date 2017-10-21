@@ -15,5 +15,5 @@ fi
 cd luajit
 
 make
-make install
+make PREFIX=/usr install
 

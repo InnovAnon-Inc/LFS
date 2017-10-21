@@ -25,10 +25,10 @@ tar xf lxml-4.0.0.tar.gz
 pushd  lxml-4.0.0
 
 python setup.py build
-python setup.py install --optimize=1
+python setup.py install --optimize=1 --prefix=/usr
 python3 setup.py clean
 python3 setup.py build
-python3 setup.py install --optimize=1
+python3 setup.py install --optimize=1 --prefix=/usr
 
 popd
 

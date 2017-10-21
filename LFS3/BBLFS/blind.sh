@@ -16,5 +16,5 @@ cd blind
 
 sed -i s@/usr/local@/usr@g config.mk
 make
-make install
+make PREFIX=/usr install
 

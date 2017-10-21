@@ -15,7 +15,7 @@ fi
 cd libpsl
 
 ./autogen.sh
-./configure
+./configure --prefix=/usr
 make
 #make check
 make install

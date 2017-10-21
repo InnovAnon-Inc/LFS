@@ -23,6 +23,7 @@ svn status --no-ignore | grep -E '(^\?)|(^\I)' | sed 's/^. *//' | \
 sed 's/\(.*\)/"\1"/' | xargs rm -rf
 svn up --forc
 fi
+/workspace/LFS/LFS3/BBLFS/autoconf269.sh
 ./autogen.sh
 popd
 cp -r ../mpfr .

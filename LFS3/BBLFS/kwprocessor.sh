@@ -16,5 +16,5 @@ fi
 cd kwprocessor
 
 make
-make install
+make PREFIX=/usr install
 

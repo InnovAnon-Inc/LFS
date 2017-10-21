@@ -11,8 +11,8 @@ chown -v lfs:lfs $LFS/tools
 chmod -v a+wt $LFS/tools
 ln -v -s $LFS/tools /tools
 
-su - lfs << EOF2
-source \$HOME/.bashrc
+#su - lfs << EOF2
+#source \$HOME/.bashrc
 cd /workspace/LFS/LFS3/REPOS/TOOLS
 ./tools.sh
-EOF2
+#EOF2

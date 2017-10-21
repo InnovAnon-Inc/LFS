@@ -16,5 +16,5 @@ fi
 cd hashcat
 
 make
-make install
+make PREFIX=/usr install
 

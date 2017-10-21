@@ -15,6 +15,6 @@ fi
 cd irssi
 
 ./autogen.sh
-./configure
+./configure --prefix=/usr
 make
 make install

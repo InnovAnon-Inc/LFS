@@ -17,7 +17,7 @@ cd cpython
 export PYTHONIOENCODING=utf-8
 
 autoreconf -fi
-./configure --with-lto
+./configure --with-lto --prefix=/usr
 #make
 make profile-opt
 make install

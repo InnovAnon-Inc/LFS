@@ -16,5 +16,5 @@ fi
 cd maskprocessor/src
 
 make
-make install
+make PREFIX=/usr install
 

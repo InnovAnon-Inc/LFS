@@ -15,7 +15,7 @@ rm -rf eigen-build
 mkdir  eigen-build
 pushd  eigen-build
 
-cmake ../eigen
+cmake -DCMAKE_INSTALL_PREFIX=/usr ../eigen
 make
 make install
 

@@ -15,7 +15,7 @@ fi
 cd dotgnu-pnet
 
 ./autogen.sh
-./configure
+./configure --prefix=/usr
 make
 make install
 

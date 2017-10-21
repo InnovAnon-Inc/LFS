@@ -14,7 +14,7 @@ fi
 
 cd mako
 
-python setup.py install --optimize=1
+python setup.py install --optimize=1 --prefix=/usr
 
 sed -i "s:mako-render:&3:g" setup.py &&
-python3 setup.py install --optimize=1
+python3 setup.py install --optimize=1 --prefix=/usr

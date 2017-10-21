@@ -2,20 +2,20 @@ set -eo nounset
 
 cd /other-repos || cd /repos
 
-if [ -d distcc ] ; then
-	pushd distcc
+if [ -d ntopng ] ; then
+	pushd ntopng
 	git reset --hard
 	git clean -d -f -x
 	git pull origin master
-	git submodule update --init --recursive
 	popd
 else
-	git clone --recursive https://github.com/distcc/distcc.git
+	git clone https://github.com/ntop/ntopng.git
 fi
 
-cd distcc
+cd ntopng
 
 ./autogen.sh
 ./configure --prefix=/usr
 make
 make install
+

@@ -11,7 +11,7 @@ tar xf awk.tar.gz
 pushd  awk
 
 # not using standard prefix
-./configure
+./configure --prefix=/usr/local
 make
 make install
 

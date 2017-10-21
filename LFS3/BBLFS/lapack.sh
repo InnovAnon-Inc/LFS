@@ -18,7 +18,7 @@ rm -rf lapack-build
 mkdir  lapack-build
 pushd  lapack-build
 
-cmake ../lapack
+cmake -DCMAKE_INSTALL_PREFIX=/usr ../lapack
 make
 make install
 

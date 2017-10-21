@@ -15,7 +15,7 @@ fi
 cd libglvnd
 
 ./autogen.sh
-./configure
+./configure --prefix=/usr
 make
 make install
 

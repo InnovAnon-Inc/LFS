@@ -15,5 +15,5 @@ fi
 cd iotop
 
 make
-make install
+make PREFIX=/usr install
 

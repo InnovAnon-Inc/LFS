@@ -15,7 +15,7 @@ fi
 cd autoconf-archive
 
 ./bootstrap.sh
-./configure
+./configure --prefix=/usr
 make
 make install
 

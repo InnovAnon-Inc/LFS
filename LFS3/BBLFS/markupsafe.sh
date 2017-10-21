@@ -15,7 +15,7 @@ fi
 cd markupsafe
 
 python setup.py build
-python setup.py install --optimize=1
+python setup.py install --optimize=1 --prefix=/usr
 python3 setup.py build
-python3 setup.py install --optimize=1
+python3 setup.py install --optimize=1 --prefix=/usr
 

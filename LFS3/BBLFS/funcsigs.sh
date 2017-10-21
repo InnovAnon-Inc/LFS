@@ -14,5 +14,5 @@ fi
 
 cd funcsigs
 
-python setup.py install --optimize=1
+python setup.py install --optimize=1 --prefix=/usr
 

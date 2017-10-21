@@ -15,7 +15,7 @@ fi
 cd glfw
 
 cmake .
-./configure
+./configure --prefix=/usr
 make
 make install
 

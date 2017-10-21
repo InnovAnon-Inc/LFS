@@ -15,5 +15,5 @@ fi
 cd lz4
 
 make
-make install
+make PREFIX=/usr install
 

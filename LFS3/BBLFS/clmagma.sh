@@ -12,7 +12,7 @@ pushd  clmagma-1.3.0
 
 # TODO maybe edit make.inc
 make
-make install
+make PREFIX=/usr install
 
 popd
 rm -rf clmagma-1.3.0

@@ -11,7 +11,7 @@ tar xf mawk.tar.gz
 pushd  mawk-1.3.4-20161120
 
 autoreconf -fi
-./configure
+./configure --prefix=/usr/local
 make
 make install
 

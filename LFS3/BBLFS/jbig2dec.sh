@@ -10,7 +10,7 @@ rm -rf jbig2dec-0.14
 tar xf jbig2dec-0.14.tar.gz
 pushd  jbig2dec-0.14
 
-./configure
+./configure --prefix=/usr
 make
 make install
 
