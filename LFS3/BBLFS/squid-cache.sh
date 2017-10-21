@@ -16,7 +16,8 @@ cd squid
 
 ./bootstrap.sh
 ./configure --prefix=/usr \
-            --sysconfdir=/etc
+            --sysconfdir=/etc \
+            --localstatedir=/var
 make
 make install
 
