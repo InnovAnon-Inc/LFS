@@ -4,17 +4,17 @@ set -eo nounset
 
 /workspace/LFS/LFS3/BLFS/autoconf264.sh
 ./tools-build-wrapper.sh ./binutils-pass1.sh
-#/workspace/LFS/LFS3/BLFS/autoconf269.sh
-#/workspace/LFS/LFS3/BLFS/autoconf265.sh
+/workspace/LFS/LFS3/BLFS/autoconf269.sh
+./tools-build-wrapper.sh ./mpfr.sh
+./tools-build-wrapper.sh ./gmp.sh
+./tools-build-wrapper.sh ./mpc.sh
 ./tools-build-wrapper.sh ./gcc-pass1.sh
 ./tools-build-wrapper.sh ./linux-headers.sh
-/workspace/LFS/LFS3/BLFS/autoconf264.sh
 ./tools-build-wrapper.sh ./glibc.sh
 ./tools-build-wrapper.sh ./gcc-libstdc++.sh
-#/workspace/LFS/LFS3/BLFS/autoconf264.sh
+/workspace/LFS/LFS3/BLFS/autoconf264.sh
 ./tools-build-wrapper.sh ./binutils-pass2.sh
-#/workspace/LFS/LFS3/BLFS/autoconf269.sh
-#/workspace/LFS/LFS3/BLFS/autoconf265.sh
+/workspace/LFS/LFS3/BLFS/autoconf269.sh
 ./tools-build-wrapper.sh ./gcc-pass2.sh
 ./tools-build-wrapper.sh ./tcl.sh
 echo TODO
