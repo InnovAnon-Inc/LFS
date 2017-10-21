@@ -4,9 +4,9 @@ cd /other-repos || cd /repos
 
 if [ -d mysql-server ] ; then
 	pushd mysql-server
-	git reset --hard
-	git clean -d -f -x
-	git checkout 5.7
+	#git reset --hard
+	#git clean -d -f -x
+	#git checkout 5.7
 	git pull origin 5.7
 	popd
 else
